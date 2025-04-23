@@ -20,6 +20,7 @@ jobs:
           node-version: "18"
           cache: "pnpm"
       - run: pnpm install
+      - run: pnpm build
       - run: make check-feelibs
 
   check-assets:
@@ -34,6 +35,7 @@ jobs:
           node-version: "18"
           cache: "pnpm"
       - run: pnpm install
+      - run: pnpm build
       - run: make check-assets
 
   check-staking:
@@ -48,6 +50,7 @@ jobs:
           node-version: "18"
           cache: "pnpm"
       - run: pnpm install
+      - run: pnpm build
       - run: make check-staking
 
   check-token-messaging:
@@ -62,6 +65,7 @@ jobs:
           node-version: "18"
           cache: "pnpm"
       - run: pnpm install
+      - run: pnpm build
       - run: make check-token-messaging
 
   check-credit-messaging:
@@ -76,4 +80,5 @@ jobs:
           node-version: "18"
           cache: "pnpm"
       - run: pnpm install
+      - run: pnpm build
       - run: make check-credit-messaging
