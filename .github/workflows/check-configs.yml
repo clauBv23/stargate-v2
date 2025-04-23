@@ -20,7 +20,7 @@ jobs:
           node-version: "18"
           cache: "pnpm"
       - run: pnpm install
-      - run: cd packages/stg-evm-v2 && make check-feelibs
+      - run: make check-feelibs
 
   check-assets:
     runs-on: ubuntu-latest
@@ -34,7 +34,7 @@ jobs:
           node-version: "18"
           cache: "pnpm"
       - run: pnpm install
-      - run: cd packages/stg-evm-v2 && make check-assets
+      - run: make check-assets
 
   check-staking:
     runs-on: ubuntu-latest
@@ -48,7 +48,7 @@ jobs:
           node-version: "18"
           cache: "pnpm"
       - run: pnpm install
-      - run: cd packages/stg-evm-v2 && make check-staking
+      - run: make check-staking
 
   check-token-messaging:
     runs-on: ubuntu-latest
@@ -62,7 +62,7 @@ jobs:
           node-version: "18"
           cache: "pnpm"
       - run: pnpm install
-      - run: cd packages/stg-evm-v2 && make check-token-messaging
+      - run: make check-token-messaging
 
   check-credit-messaging:
     runs-on: ubuntu-latest
@@ -76,4 +76,4 @@ jobs:
           node-version: "18"
           cache: "pnpm"
       - run: pnpm install
-      - run: cd packages/stg-evm-v2 && make check-credit-messaging
+      - run: make check-credit-messaging
