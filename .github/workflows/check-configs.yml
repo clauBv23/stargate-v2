@@ -2,10 +2,11 @@ name: Check Configurations
 
 on:
   workflow_dispatch:
-  # pull_request:
-  #   branches: [main]
-  # push:
-  #   branches: [main]
+
+# Add concurrency to prevent parallel runs
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   check-feelibs:
@@ -17,11 +18,10 @@ jobs:
           version: 8
       - uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "20"
           cache: "pnpm"
-      - run: pnpm install
-      - run: pnpm build --filter "@stargatefinance/stg-definitions-v2"
-      - run: pnpm build --filter "@stargatefinance/stg-evm-v2"
+      - name: Build
+        uses: ./.github/workflows/actions/build
       - run: make check-feelibs
 
   check-assets:
@@ -33,11 +33,10 @@ jobs:
           version: 8
       - uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "20"
           cache: "pnpm"
-      - run: pnpm install
-      - run: pnpm build --filter "@stargatefinance/stg-definitions-v2"
-      - run: pnpm build --filter "@stargatefinance/stg-evm-v2"
+      - name: Build
+        uses: ./.github/workflows/actions/build
       - run: make check-assets
 
   check-staking:
@@ -49,11 +48,10 @@ jobs:
           version: 8
       - uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "20"
           cache: "pnpm"
-      - run: pnpm install
-      - run: pnpm build --filter "@stargatefinance/stg-definitions-v2"
-      - run: pnpm build --filter "@stargatefinance/stg-evm-v2"
+      - name: Build
+        uses: ./.github/workflows/actions/build
       - run: make check-staking
 
   check-token-messaging:
@@ -65,11 +63,10 @@ jobs:
           version: 8
       - uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "20"
           cache: "pnpm"
-      - run: pnpm install
-      - run: pnpm build --filter "@stargatefinance/stg-definitions-v2"
-      - run: pnpm build --filter "@stargatefinance/stg-evm-v2"
+      - name: Build
+        uses: ./.github/workflows/actions/build
       - run: make check-token-messaging
 
   check-credit-messaging:
@@ -81,9 +78,8 @@ jobs:
           version: 8
       - uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "20"
           cache: "pnpm"
-      - run: pnpm install
-      - run: pnpm build --filter "@stargatefinance/stg-definitions-v2"
-      - run: pnpm build --filter "@stargatefinance/stg-evm-v2"
+      - name: Build
+        uses: ./.github/workflows/actions/build
       - run: make check-credit-messaging
