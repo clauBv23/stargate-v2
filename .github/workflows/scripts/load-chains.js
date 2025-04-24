@@ -69,4 +69,4 @@ const chainList = [
     'zkpolygon-mainnet',
 ];
 // Return the list of strings
-console.log(chainList);
+console.log(JSON.stringify(chainList));
