@@ -7,7 +7,7 @@ on:
 # in .npmrc file and if undefined, the node setup would fail
 env:
   NPM_TOKEN: ""
-  NUM_RETRIES: 50
+  NUM_RETRIES: 100
 
 # Add concurrency to prevent parallel runs
 concurrency:
