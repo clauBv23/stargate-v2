@@ -69,7 +69,7 @@ jobs:
         env:
           NUM_RETRIES: ${{ secrets.NUM_RETRIES }}
 
- generate-matrix:
+  generate-matrix:
     runs-on: ubuntu-latest
     outputs:
       chains: ${{ steps.set-matrix.outputs.chains }}
@@ -83,7 +83,6 @@ jobs:
         run: |
           CHAINS=$(node .github/workflows/scripts/load-chains.js)
           echo "chains=$CHAINS" >> $GITHUB_OUTPUT
-
 
   check-token-messaging:
     needs: generate-matrix
@@ -107,7 +106,7 @@ jobs:
         env:
           NUM_RETRIES: ${{ secrets.NUM_RETRIES }}
           FROM_CHAINS: ${{ matrix.chain }}
- 
+
   check-credit-messaging:
     runs-on: ubuntu-latest
     steps:
