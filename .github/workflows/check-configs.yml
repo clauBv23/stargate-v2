@@ -71,6 +71,9 @@ jobs:
 
   check-token-messaging:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        chain: ${{ fromJson(steps.load-chains.outputs.chains) }}
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
@@ -82,10 +85,23 @@ jobs:
           cache: "pnpm"
       - name: Build
         uses: ./.github/workflows/actions/build
-      - name: Check Token Messaging
+      - name: Load Chains
+        id: load-chains
+        run: |
+          CHAINS=$(node .github/workflows/scripts/load-chains.js)
+          echo "chains=$CHAINS" >> $GITHUB_OUTPUT
+      - name: Verify Loaded Chains
+        run: |
+          echo "Loaded chains:"
+          echo '${{ steps.load-chains.outputs.chains }}' | jq '.'
+          echo "Number of chains: $(echo '${{ steps.load-chains.outputs.chains }}' | jq 'length')"
+          echo "First few chains:"
+          echo '${{ steps.load-chains.outputs.chains }}' | jq '.[0:5]'
+      - name: Check Token Messaging for ${{ matrix.chain }}
         run: make check-token-messaging
         env:
           NUM_RETRIES: ${{ secrets.NUM_RETRIES }}
+          FROM_CHAINS: ${{ matrix.chain }}
 
   check-credit-messaging:
     runs-on: ubuntu-latest
