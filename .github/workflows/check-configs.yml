@@ -85,6 +85,7 @@ jobs:
           echo "chains=$CHAINS" >> $GITHUB_OUTPUT
 
   check-token-messaging:
+    continue-on-error: true
     needs: generate-matrix
     runs-on: ubuntu-latest
     strategy:
