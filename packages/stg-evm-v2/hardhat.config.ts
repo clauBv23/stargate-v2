@@ -72,7 +72,6 @@ const mainnetAccounts: HDAccountsUserConfig = {
 
 const getRpcUrl = (chainName: string) => {
     const url = process.env.RPC_URL
-    console.log('url', url, chainName)
     if (!url) {
         return null
     }
