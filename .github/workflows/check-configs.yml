@@ -3,10 +3,10 @@ name: Check Configurations
 on:
   workflow_dispatch:
 
-# We'll default the NPM_TOKEN to an empty value since we use it
+# We'll default the NUM_RETRIES to an empty value since we use it
 # in .npmrc file and if undefined, the node setup would fail
 env:
-  NPM_TOKEN: ""
+  NUM_RETRIES: ""
 
 # Add concurrency to prevent parallel runs
 concurrency:
@@ -30,7 +30,7 @@ jobs:
       - name: Check Feelibs
         run: make check-feelibs
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NUM_RETRIES: ${{ secrets.NUM_RETRIES }}
 
   check-assets:
     runs-on: ubuntu-latest
@@ -48,7 +48,7 @@ jobs:
       - name: Check Assets
         run: make check-assets
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NUM_RETRIES: ${{ secrets.NUM_RETRIES }}
 
   check-staking:
     runs-on: ubuntu-latest
@@ -66,7 +66,7 @@ jobs:
       - name: Check Staking
         run: make check-staking
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NUM_RETRIES: ${{ secrets.NUM_RETRIES }}
 
   check-token-messaging:
     runs-on: ubuntu-latest
@@ -84,7 +84,7 @@ jobs:
       - name: Check Token Messaging
         run: make check-token-messaging
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NUM_RETRIES: ${{ secrets.NUM_RETRIES }}
 
   check-credit-messaging:
     runs-on: ubuntu-latest
@@ -102,4 +102,4 @@ jobs:
       - name: Check Credit Messaging
         run: make check-credit-messaging
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NUM_RETRIES: ${{ secrets.NUM_RETRIES }}
