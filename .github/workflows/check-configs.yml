@@ -109,7 +109,12 @@ jobs:
           FROM_CHAINS: ${{ matrix.chain }}
 
   check-credit-messaging:
+    continue-on-error: true
+    needs: generate-matrix
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        chain: ${{ fromJson(needs.generate-matrix.outputs.chains) }}
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
@@ -121,7 +126,8 @@ jobs:
           cache: "pnpm"
       - name: Build
         uses: ./.github/workflows/actions/build
-      - name: Check Credit Messaging
+      - name: Check Credit Messaging for ${{ matrix.chain }}
         run: make check-credit-messaging
         env:
           NUM_RETRIES: ${{ secrets.NUM_RETRIES }}
+          FROM_CHAINS: ${{ matrix.chain }}
