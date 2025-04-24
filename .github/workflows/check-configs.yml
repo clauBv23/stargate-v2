@@ -8,6 +8,7 @@ on:
 env:
   NPM_TOKEN: ""
   NUM_RETRIES: 100
+  RPC_URL: ${{ secrets.RPC_URL }}
 
 # Add concurrency to prevent parallel runs
 concurrency:
@@ -30,8 +31,6 @@ jobs:
         uses: ./.github/workflows/actions/build
       - name: Check Feelibs
         run: make check-feelibs
-        env:
-          NUM_RETRIES: ${{ secrets.NUM_RETRIES }}
 
   check-assets:
     runs-on: ubuntu-latest
@@ -48,8 +47,6 @@ jobs:
         uses: ./.github/workflows/actions/build
       - name: Check Assets
         run: make check-assets
-        env:
-          NUM_RETRIES: ${{ secrets.NUM_RETRIES }}
 
   check-staking:
     runs-on: ubuntu-latest
@@ -66,8 +63,6 @@ jobs:
         uses: ./.github/workflows/actions/build
       - name: Check Staking
         run: make check-staking
-        env:
-          NUM_RETRIES: ${{ secrets.NUM_RETRIES }}
 
   generate-matrix:
     runs-on: ubuntu-latest
@@ -105,7 +100,6 @@ jobs:
       - name: Check Token Messaging for ${{ matrix.chain }}
         run: make check-token-messaging
         env:
-          NUM_RETRIES: ${{ secrets.NUM_RETRIES }}
           FROM_CHAINS: ${{ matrix.chain }}
 
   check-credit-messaging:
@@ -129,5 +123,4 @@ jobs:
       - name: Check Credit Messaging for ${{ matrix.chain }}
         run: make check-credit-messaging
         env:
-          NUM_RETRIES: ${{ secrets.NUM_RETRIES }}
           FROM_CHAINS: ${{ matrix.chain }}

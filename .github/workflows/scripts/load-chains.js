@@ -1,9 +1,6 @@
 #!/usr/bin/env node
 
-/**
- * This script returns a simple list of strings.
- */
-
+// todo update this to get the chains from the source of truth
 const chainList = [
     'abstract-mainnet',
     'ape-mainnet',
