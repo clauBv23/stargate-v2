@@ -9,6 +9,7 @@ env:
   NPM_TOKEN: ""
   NUM_RETRIES: 100
   RPC_URL: ${{ secrets.RPC_URL }}
+  LZ_ENABLE_EXPERIMENTAL_PARALLEL_EXECUTION: 1
 
 # Add concurrency to prevent parallel runs
 concurrency:
