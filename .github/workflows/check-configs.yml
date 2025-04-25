@@ -3,6 +3,9 @@ name: Check Configurations
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 # We'll default the NPM_TOKEN to an empty value since we use it
 # in .npmrc file and if undefined, the node setup would fail
 env:
@@ -21,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@2.4.0
         with:
           version: 8
       - uses: actions/setup-node@v4
@@ -37,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@2.4.0
         with:
           version: 8
       - uses: actions/setup-node@v4
@@ -53,7 +56,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@2.4.0
         with:
           version: 8
       - uses: actions/setup-node@v4
@@ -89,7 +92,7 @@ jobs:
         chain: ${{ fromJson(needs.generate-matrix.outputs.chains) }}
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@2.4.0
         with:
           version: 8
       - uses: actions/setup-node@v4
@@ -112,7 +115,7 @@ jobs:
         chain: ${{ fromJson(needs.generate-matrix.outputs.chains) }}
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@2.4.0
         with:
           version: 8
       - uses: actions/setup-node@v4
