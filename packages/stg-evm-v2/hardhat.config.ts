@@ -657,6 +657,18 @@ const networks: NetworksUserConfig = {
     },
 }
 
+console.log(
+    Object.fromEntries(
+        Object.entries(networks)
+            .filter(([key]) => key.includes('testnet'))
+            .map(([key, value]) => [
+                key,
+                value && 'url' in value && typeof value.url === 'string'
+                    ? { ...value, url: value.url.slice(-6) }
+                    : value,
+            ])
+    )
+)
 // We'll connect V1 deployments so that we can access them when deploying e.g. zapper
 const externalConfig: HardhatUserConfig['external'] = {
     deployments: Object.fromEntries(
