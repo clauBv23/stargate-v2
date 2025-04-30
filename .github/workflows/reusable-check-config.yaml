@@ -18,6 +18,7 @@ env:
   NUM_RETRIES: 100
   RPC_URL_MAINNET: ${{ secrets.RPC_URL_MAINNET }}
   RPC_URL_TESTNET: ${{ secrets.RPC_URL_TESTNET }}
+  RPC_URL_ODYSSEY_TESTNET: ${{ secrets.RPC_URL_ODYSSEY_TESTNET }}
   LZ_ENABLE_EXPERIMENTAL_PARALLEL_EXECUTION: 1
 
 # Add concurrency to prevent parallel runs
