@@ -406,7 +406,11 @@ check-rewarder:
 	$(HARDHAT) stg:check::rewarder --oapp-config $(CONFIG_BASE_PATH)/rewarder.config.ts
 
 check-oft-wrapper:
+ifeq ($(network),mainnet)
 	$(HARDHAT) stg:check::oft-wrapper --oapp-config $(CONFIG_BASE_PATH)/oft-wrapper.config.ts
+else
+	@echo "check-oft-wrapper only runs on mainnet"
+endif
 
 check-token-messaging:
 	$(HARDHAT) stg:check::token-messaging --oapp-config $(CONFIG_BASE_PATH)/token-messaging.config.ts
