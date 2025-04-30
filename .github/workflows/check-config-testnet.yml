@@ -6,6 +6,9 @@ on:
 permissions:
   contents: read
 
+env:
+  RPC_URL_ODYSSEY_TESTNET: ${{ secrets.RPC_URL_ODYSSEY_TESTNET }}
+
 jobs:
   check-config:
     uses: ./.github/workflows/reusable-check-config.yaml
