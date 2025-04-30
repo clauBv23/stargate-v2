@@ -135,7 +135,7 @@ const networks: NetworksUserConfig = {
     'arbsep-testnet': {
         eid: EndpointId.ARBSEP_V2_TESTNET,
         url:
-            getRpcUrl('abstract', true) ||
+            getRpcUrl('arbsep', true) ||
             process.env.RPC_URL_ARBITRUM_TESTNET ||
             'https://sepolia-rollup.arbitrum.io/rpc',
         accounts: testnetAccounts,
@@ -166,8 +166,8 @@ const networks: NetworksUserConfig = {
     'odyssey-testnet': {
         eid: EndpointId.ODYSSEY_V2_TESTNET,
         url:
-            getRpcUrl('odyssey', true) ||
             process.env.RPC_URL_ODYSSEY_TESTNET ||
+            getRpcUrl('odyssey', true) ||
             'https://story-testnet-evm.itrocket.net',
         accounts: testnetAccounts,
     },

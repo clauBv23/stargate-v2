@@ -380,15 +380,19 @@ endif
 
 check-assets:
 	$(HARDHAT) stg:check::asset --oapp-config $(CONFIG_BASE_PATH)/asset.eth.config.ts
+ifeq ($(network),mainnet)
 	$(HARDHAT) stg:check::asset --oapp-config $(CONFIG_BASE_PATH)/asset.meth.config.ts
 	$(HARDHAT) stg:check::asset --oapp-config $(CONFIG_BASE_PATH)/asset.metis.config.ts
+endif
 	$(HARDHAT) stg:check::asset --oapp-config $(CONFIG_BASE_PATH)/asset.usdc.config.ts
 	$(HARDHAT) stg:check::asset --oapp-config $(CONFIG_BASE_PATH)/asset.usdt.config.ts
 
 check-feelibs:
 	$(HARDHAT) stg:check::feelib-v1 --oapp-config $(CONFIG_BASE_PATH)/feelib-v1.eth.config.ts
+ifeq ($(network),mainnet)
 	$(HARDHAT) stg:check::feelib-v1 --oapp-config $(CONFIG_BASE_PATH)/feelib-v1.meth.config.ts
 	$(HARDHAT) stg:check::feelib-v1 --oapp-config $(CONFIG_BASE_PATH)/feelib-v1.metis.config.ts
+endif
 	$(HARDHAT) stg:check::feelib-v1 --oapp-config $(CONFIG_BASE_PATH)/feelib-v1.usdc.config.ts
 	$(HARDHAT) stg:check::feelib-v1 --oapp-config $(CONFIG_BASE_PATH)/feelib-v1.usdt.config.ts
 
