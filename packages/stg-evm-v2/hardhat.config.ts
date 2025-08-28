@@ -182,7 +182,7 @@ const networks: NetworksUserConfig = {
     },
     'ape-mainnet': {
         eid: EndpointId.APE_V2_MAINNET,
-        url: process.env.RPC_URL_APE_MAINNET || 'https://rpc.apechain.com',
+        url: process.env.RPC_URL_APE_MAINNET || 'https://apechain.drpc.org',
         accounts: mainnetAccounts,
         safeConfig: getSafeConfig(EndpointId.APE_V2_MAINNET),
         timeout: DEFAULT_NETWORK_TIMEOUT,
@@ -204,7 +204,7 @@ const networks: NetworksUserConfig = {
     },
     'aurora-mainnet': {
         eid: EndpointId.AURORA_V2_MAINNET,
-        url: process.env.RPC_URL_AURORA_MAINNET || 'https://mainnet.aurora.dev',
+        url: process.env.RPC_URL_AURORA_MAINNET || 'https://aurora.drpc.org',
         accounts: mainnetAccounts,
         safeConfig: getSafeConfig(EndpointId.AURORA_V2_MAINNET),
         timeout: DEFAULT_NETWORK_TIMEOUT,
@@ -394,7 +394,7 @@ const networks: NetworksUserConfig = {
     },
     'iota-mainnet': {
         eid: EndpointId.IOTA_V2_MAINNET,
-        url: process.env.RPC_URL_IOTA_MAINNET || 'https://rpc.ankr.com/iota_evm',
+        url: process.env.RPC_URL_IOTA_MAINNET || 'https://json-rpc.evm.iotaledger.net',
         accounts: mainnetAccounts,
         safeConfig: getSafeConfig(EndpointId.IOTA_V2_MAINNET),
         timeout: DEFAULT_NETWORK_TIMEOUT,
@@ -534,7 +534,7 @@ const networks: NetworksUserConfig = {
     },
     'rootstock-mainnet': {
         eid: EndpointId.ROOTSTOCK_V2_MAINNET,
-        url: process.env.RPC_URL_ROOTSTOCK_MAINNET || 'https://public-node.rsk.co',
+        url: process.env.RPC_URL_ROOTSTOCK_V2_MAINNET || 'https://public-node.rsk.co',
         accounts: mainnetAccounts,
         safeConfig: getSafeConfig(EndpointId.ROOTSTOCK_V2_MAINNET),
         timeout: DEFAULT_NETWORK_TIMEOUT,
@@ -548,7 +548,7 @@ const networks: NetworksUserConfig = {
     },
     'sei-mainnet': {
         eid: EndpointId.SEI_V2_MAINNET,
-        url: process.env.RPC_URL_SEI_MAINNET || 'https://sei.drpc.org',
+        url: process.env.RPC_URL_SEI_MAINNET || 'https://evm-rpc.sei-apis.com',
         accounts: mainnetAccounts,
         safeConfig: getSafeConfig(EndpointId.SEI_V2_MAINNET),
         timeout: DEFAULT_NETWORK_TIMEOUT,
@@ -651,14 +651,14 @@ const networks: NetworksUserConfig = {
     },
     'zkconsensys-mainnet': {
         eid: EndpointId.ZKCONSENSYS_V2_MAINNET,
-        url: process.env.RPC_URL_ZKCONSENSYS_MAINNET || 'https://1rpc.io/linea',
+        url: process.env.RPC_URL_ZKCONSENSYS_MAINNET || 'https://linea.drpc.org',
         accounts: mainnetAccounts,
         safeConfig: getSafeConfig(EndpointId.ZKCONSENSYS_V2_MAINNET),
         timeout: DEFAULT_NETWORK_TIMEOUT,
     },
     'zkpolygon-mainnet': {
         eid: EndpointId.ZKPOLYGON_V2_MAINNET,
-        url: process.env.RPC_URL_ZKPOLYGON_MAINNET || 'https://zkevm-rpc.com',
+        url: process.env.RPC_URL_ZKPOLYGON_MAINNET || 'https://polygon-zkevm.drpc.org',
         accounts: mainnetAccounts,
         safeConfig: getSafeConfig(EndpointId.ZKPOLYGON_V2_MAINNET),
         timeout: DEFAULT_NETWORK_TIMEOUT,
