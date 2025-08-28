@@ -67,15 +67,8 @@ const testnetAccounts: HDAccountsUserConfig = {
 }
 
 const mainnetAccounts: HDAccountsUserConfig = {
+    // using Test mnemonic for mainnet to use it in the tests, in case they are not set in the env variable
     mnemonic: process.env.MNEMONIC_MAINNET || process.env.MNEMONIC || TEST_MNEMONIC,
-}
-
-const getRpcUrl = (chainName: string, isTestnet = false) => {
-    const url = isTestnet ? process.env.RPC_URL_TESTNET : process.env.RPC_URL_MAINNET
-    if (!url) {
-        return null
-    }
-    return url.replace('chainName', chainName)
 }
 
 const hardhatNamedAccounts: HardhatUserConfig = {
@@ -98,7 +91,7 @@ const hardhatNamedAccounts: HardhatUserConfig = {
             'polygon-sandbox-local': '0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC',
             default: 2,
         },
-        usdcAdmin: {
+        tokenAdmin: {
             default: 3, // 0x126A13528A923EF289B5b72FFFD6c4a198F91Db4
         },
     },
@@ -161,14 +154,6 @@ const networks: NetworksUserConfig = {
             getRpcUrl('klaytn', true) ||
             process.env.RPC_URL_KLAYTN_TESTNET ||
             'https://kaia-kairos.blockpi.network/v1/rpc/public',
-        accounts: testnetAccounts,
-    },
-    'odyssey-testnet': {
-        eid: EndpointId.ODYSSEY_V2_TESTNET,
-        url:
-            process.env.RPC_URL_ODYSSEY_TESTNET ||
-            getRpcUrl('odyssey', true) ||
-            'https://story-testnet-evm.itrocket.net',
         accounts: testnetAccounts,
     },
     'mantlesep-testnet': {
@@ -246,7 +231,7 @@ const networks: NetworksUserConfig = {
     },
     'base-mainnet': {
         eid: EndpointId.BASE_V2_MAINNET,
-        url: getRpcUrl('base') || process.env.RPC_URL_BASE_MAINNET || 'https://base.drpc.org',
+        url: getRpcUrl('base') || process.env.RPC_URL_BASE_MAINNET || 'https://base-pokt.nodies.app',
         accounts: mainnetAccounts,
         safeConfig: getSafeConfig(EndpointId.BASE_V2_MAINNET),
         timeout: DEFAULT_NETWORK_TIMEOUT,
@@ -263,6 +248,13 @@ const networks: NetworksUserConfig = {
         url: getRpcUrl('blast') || process.env.RPC_URL_BLAST_MAINNET || 'https://blast-rpc.publicnode.com',
         accounts: mainnetAccounts,
         safeConfig: getSafeConfig(EndpointId.BLAST_V2_MAINNET),
+        timeout: DEFAULT_NETWORK_TIMEOUT,
+    },
+    'botanix-mainnet': {
+        eid: EndpointId.BOTANIX_V2_MAINNET,
+        url: process.env.RPC_URL_BOTANIX_MAINNET || 'https://rpc.botanixlabs.com',
+        accounts: mainnetAccounts,
+        safeConfig: getSafeConfig(EndpointId.BOTANIX_V2_MAINNET),
         timeout: DEFAULT_NETWORK_TIMEOUT,
     },
     'bsc-mainnet': {
@@ -307,6 +299,13 @@ const networks: NetworksUserConfig = {
         url: getRpcUrl('degen') || process.env.RPC_URL_DEGEN_MAINNET || 'https://rpc.degen.tips',
         accounts: mainnetAccounts,
         safeConfig: getSafeConfig(EndpointId.DEGEN_V2_MAINNET),
+        timeout: DEFAULT_NETWORK_TIMEOUT,
+    },
+    'edu-mainnet': {
+        eid: EndpointId.EDU_V2_MAINNET,
+        url: process.env.RPC_URL_EDU_MAINNET || 'https://rpc.edu-chain.raas.gelato.cloud',
+        accounts: mainnetAccounts,
+        safeConfig: getSafeConfig(EndpointId.EDU_V2_MAINNET),
         timeout: DEFAULT_NETWORK_TIMEOUT,
     },
     'ethereum-mainnet': {
@@ -385,6 +384,13 @@ const networks: NetworksUserConfig = {
         safeConfig: getSafeConfig(EndpointId.GRAVITY_V2_MAINNET),
         timeout: DEFAULT_NETWORK_TIMEOUT,
     },
+    'hedera-mainnet': {
+        eid: EndpointId.HEDERA_V2_MAINNET,
+        url: process.env.RPC_URL_HEDERA_MAINNET || 'https://mainnet.hashio.io/api',
+        accounts: mainnetAccounts,
+        safeConfig: getSafeConfig(EndpointId.HEDERA_V2_MAINNET),
+        timeout: DEFAULT_NETWORK_TIMEOUT,
+    },
     'hemi-mainnet': {
         eid: EndpointId.HEMI_V2_MAINNET,
         url: getRpcUrl('hemi') || process.env.RPC_URL_HEMI_MAINNET || 'https://7e57304f.rpc.hemi.network/rpc',
@@ -408,7 +414,7 @@ const networks: NetworksUserConfig = {
     },
     'islander-mainnet': {
         eid: EndpointId.ISLANDER_V2_MAINNET,
-        url: getRpcUrl('islander') || process.env.RPC_URL_ISLANDER_MAINNET || 'https://rpc.vana.org',
+        url: process.env.RPC_URL_ISLANDER_MAINNET || 'https://evm-rpc-vana.josephtran.xyz',
         accounts: mainnetAccounts,
         safeConfig: getSafeConfig(EndpointId.ISLANDER_V2_MAINNET),
         timeout: DEFAULT_NETWORK_TIMEOUT,
@@ -446,7 +452,7 @@ const networks: NetworksUserConfig = {
     },
     'mantle-mainnet': {
         eid: EndpointId.MANTLE_V2_MAINNET,
-        url: getRpcUrl('mantle') || process.env.RPC_URL_MANTLE_MAINNET || 'https://mantle.drpc.org',
+        url: process.env.RPC_URL_MANTLE_MAINNET || 'https://mantle-mainnet.public.blastapi.io',
         accounts: mainnetAccounts,
         safeConfig: getSafeConfig(EndpointId.MANTLE_V2_MAINNET),
         timeout: DEFAULT_NETWORK_TIMEOUT,
@@ -500,6 +506,13 @@ const networks: NetworksUserConfig = {
         safeConfig: getSafeConfig(EndpointId.OPTIMISM_V2_MAINNET),
         timeout: DEFAULT_NETWORK_TIMEOUT,
     },
+    'orderly-mainnet': {
+        eid: EndpointId.ORDERLY_V2_MAINNET,
+        url: process.env.RPC_URL_ORDERLY_MAINNET || 'https://rpc.orderly.network',
+        accounts: mainnetAccounts,
+        safeConfig: getSafeConfig(EndpointId.ORDERLY_V2_MAINNET),
+        timeout: DEFAULT_NETWORK_TIMEOUT,
+    },
     'peaq-mainnet': {
         eid: EndpointId.PEAQ_V2_MAINNET,
         url: getRpcUrl('peaq') || process.env.RPC_URL_PEAQ_MAINNET || 'https://peaq.api.onfinality.io/public',
@@ -516,17 +529,14 @@ const networks: NetworksUserConfig = {
     },
     'plumephoenix-mainnet': {
         eid: EndpointId.PLUMEPHOENIX_V2_MAINNET,
-        url:
-            getRpcUrl('plumephoenix') ||
-            process.env.RPC_URL_PLUMEPHOENIX_MAINNET ||
-            'https://phoenix-rpc.plumenetwork.xyz',
+        url: process.env.RPC_URL_PLUMEPHOENIX_MAINNET || 'https://rpc.plume.org',
         accounts: mainnetAccounts,
         safeConfig: getSafeConfig(EndpointId.PLUMEPHOENIX_V2_MAINNET),
         timeout: DEFAULT_NETWORK_TIMEOUT,
     },
     'polygon-mainnet': {
         eid: EndpointId.POLYGON_V2_MAINNET,
-        url: getRpcUrl('polygon') || process.env.RPC_URL_POLYGON_MAINNET || 'https://polygon-pokt.nodies.app',
+        url: process.env.RPC_URL_POLYGON_MAINNET || 'https://polygon.drpc.org',
         accounts: mainnetAccounts,
         safeConfig: getSafeConfig(EndpointId.POLYGON_V2_MAINNET),
         timeout: DEFAULT_NETWORK_TIMEOUT,
@@ -547,7 +557,7 @@ const networks: NetworksUserConfig = {
     },
     'scroll-mainnet': {
         eid: EndpointId.SCROLL_V2_MAINNET,
-        url: getRpcUrl('scroll') || process.env.RPC_URL_SCROLL_MAINNET || 'https://rpc.ankr.com/scroll',
+        url: process.env.RPC_URL_SCROLL_MAINNET || 'https://scroll.api.onfinality.io/public',
         accounts: mainnetAccounts,
         safeConfig: getSafeConfig(EndpointId.SCROLL_V2_MAINNET),
         timeout: DEFAULT_NETWORK_TIMEOUT,
@@ -566,6 +576,22 @@ const networks: NetworksUserConfig = {
         url: getRpcUrl('shimmer') || process.env.RPC_URL_SHIMMER_MAINNET || 'https://json-rpc.evm.shimmer.network',
         accounts: mainnetAccounts,
         safeConfig: getSafeConfig(EndpointId.SHIMMER_V2_MAINNET),
+        timeout: DEFAULT_NETWORK_TIMEOUT,
+    },
+    'sophon-mainnet': {
+        eid: EndpointId.SOPHON_V2_MAINNET,
+        url: process.env.RPC_URL_SOPHON_MAINNET || 'https://rpc.sophon.xyz',
+        accounts: mainnetAccounts,
+        safeConfig: getSafeConfig(EndpointId.SOPHON_V2_MAINNET),
+        timeout: DEFAULT_NETWORK_TIMEOUT,
+        zksync: true,
+        ethNetwork: 'ethereum-mainnet',
+    },
+    'somnia-mainnet': {
+        eid: EndpointId.SOMNIA_V2_MAINNET,
+        url: process.env.RPC_URL_SOMNIA_MAINNET || 'https://api.infra.mainnet.somnia.network/',
+        accounts: mainnetAccounts,
+        safeConfig: getSafeConfig(EndpointId.SOMNIA_V2_MAINNET),
         timeout: DEFAULT_NETWORK_TIMEOUT,
     },
     'soneium-mainnet': {
@@ -594,6 +620,13 @@ const networks: NetworksUserConfig = {
         url: getRpcUrl('superposition') || process.env.RPC_URL_SUPERPOSITION_MAINNET || 'https://rpc.superposition.so',
         accounts: mainnetAccounts,
         safeConfig: getSafeConfig(EndpointId.SUPERPOSITION_V2_MAINNET),
+        timeout: DEFAULT_NETWORK_TIMEOUT,
+    },
+    'swell-mainnet': {
+        eid: EndpointId.SWELL_V2_MAINNET,
+        url: process.env.RPC_URL_SWELL_MAINNET || 'https://swell-mainnet.alt.technology',
+        accounts: mainnetAccounts,
+        safeConfig: getSafeConfig(EndpointId.SWELL_V2_MAINNET),
         timeout: DEFAULT_NETWORK_TIMEOUT,
     },
     'taiko-mainnet': {
@@ -627,7 +660,7 @@ const networks: NetworksUserConfig = {
     },
     'xdc-mainnet': {
         eid: EndpointId.XDC_V2_MAINNET,
-        url: getRpcUrl('xdc') || process.env.RPC_URL_XDC_MAINNET || 'https://rpc1.xinfin.network',
+        url: process.env.RPC_URL_XDC_MAINNET || 'https://rpc.xdc.org',
         accounts: mainnetAccounts,
         safeConfig: getSafeConfig(EndpointId.XDC_V2_MAINNET),
         timeout: DEFAULT_NETWORK_TIMEOUT,
@@ -753,6 +786,39 @@ const hardhatConfig: Partial<HardhatUserConfig> = {
     },
 }
 
+const getRpcUrl = (chainName: string): string | null => {
+    const [chainRawName, chainType] = chainName.split('-', 2)
+    if (!chainType || !chainRawName) return null
+
+    let templateUrl
+
+    switch (chainType) {
+        case 'testnet':
+            templateUrl = process.env.RPC_URL_TESTNET
+            break
+        case 'mainnet':
+            templateUrl = process.env.RPC_URL_MAINNET
+            break
+        default:
+            return null
+    }
+
+    const url = templateUrl?.replace('CHAIN', chainRawName) ?? null
+    return url
+}
+
+const updateNetworkRpcUrls = (networks: NetworksUserConfig): NetworksUserConfig => {
+    return Object.fromEntries(
+        Object.entries(networks).map(([networkName, networkConfig]) => {
+            if (networkConfig && 'url' in networkConfig) {
+                const dynamicUrl = getRpcUrl(networkName)
+                return [networkName, { ...networkConfig, url: dynamicUrl ?? networkConfig.url }]
+            }
+            return [networkName, networkConfig]
+        })
+    )
+}
+
 const hardhatNetworks: Pick<HardhatUserConfig, 'networks'> = {
     networks: {
         localhost: {
@@ -764,7 +830,7 @@ const hardhatNetworks: Pick<HardhatUserConfig, 'networks'> = {
             throwOnCallFailures: false,
             allowUnlimitedContractSize: true,
         },
-        ...networks,
+        ...updateNetworkRpcUrls(networks),
     },
 }
 
