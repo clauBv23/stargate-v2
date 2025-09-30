@@ -6,7 +6,7 @@ import { Stage } from '@layerzerolabs/lz-definitions'
 
 import { getCircleFiatTokenProxyDeployName } from '../../../ops/util'
 import { createGetAssetAddresses, createGetNamedAccount, getAssetNetworkConfig } from '../../../ts-src/utils/util'
-import { getContractWithEid, getSafeAddress } from '../utils'
+import { getContractWithEid, getOneSigAddressMaybe } from '../utils'
 import {
     filterValidProvidedChains,
     getChainsThatSupportTokenWithType,
@@ -57,22 +57,28 @@ export default async function buildCircleFiatTokenGraph(
                 tokenProxyAddress = await contractFactory(getContractWithEid(chain.eid, proxyContract))
             }
 
-            const stargateMultisig =
-                stage === Stage.MAINNET
-                    ? getSafeAddress(chain.eid)
-                    : await getStargateMultisigTestnet(chain.eid, 'tokenAdmin')
+            const stargateOnesig = getOneSigAddressMaybe(chain.eid)
             const assetAddresses = await getAssetAddresses(chain.eid, [tokenName])
+
+            // the role will be the stargate onesig if defined, otherwise it will be the testnet admin if it is a testnet chain
+            const onesigRole =
+                stargateOnesig !== undefined
+                    ? stargateOnesig
+                    : stage === Stage.TESTNET
+                      ? await getStargateMultisigTestnet(chain.eid, 'tokenAdmin')
+                      : undefined
             return {
                 contract: getContractWithEid(chain.eid, {
                     ...fiatContract,
                     address: tokenProxyAddress.contract.address,
                 }),
                 config: {
-                    owner: stargateMultisig,
-                    masterMinter: stargateMultisig,
-                    pauser: stargateMultisig,
-                    rescuer: stargateMultisig,
-                    blacklister: stargateMultisig,
+                    // Only set owner if defined in the chain config
+                    ...(stargateOnesig !== undefined ? { owner: stargateOnesig } : {}),
+                    masterMinter: onesigRole,
+                    pauser: onesigRole,
+                    rescuer: onesigRole,
+                    blacklister: onesigRole,
                     minters: {
                         [assetAddresses[tokenName]]: 2n ** 256n - 1n,
                     },

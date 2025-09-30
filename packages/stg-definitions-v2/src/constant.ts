@@ -21,6 +21,7 @@ export const DVNS = {
     NETHERMIND: {
         [EndpointId.ABSTRACT_V2_MAINNET]: '0xc4a1f52fda034a9a5e1b3b27d14451d15776fef6',
         [EndpointId.APE_V2_MAINNET]: '0x07653d28b0f53d4c54b70eb1f9025795b23a9d6e',
+        [EndpointId.APEXFUSIONNEXUS_V2_MAINNET]: '0x70bf42c69173d6e33b834f59630dac592c70b369',
         [EndpointId.ARBITRUM_V2_MAINNET]: '0xa7b5189bcA84Cd304D8553977c7C614329750d99',
         [EndpointId.AURORA_V2_MAINNET]: '0x34730f2570e6cff8b1c91faabf37d0dd917c4367',
         [EndpointId.AVALANCHE_V2_MAINNET]: '0xa59BA433ac34D2927232918Ef5B2eaAfcF130BA5',
@@ -28,12 +29,9 @@ export const DVNS = {
         [EndpointId.BERA_V2_MAINNET]: '0xdd7b5e1db4aafd5c8ec3b764efb8ed265aa5445b',
         [EndpointId.BOTANIX_V2_MAINNET]: '0xa4281c1c88f0278ff696edeb517052153190fc9e',
         [EndpointId.BSC_V2_MAINNET]: '0x31F748a368a893Bdb5aBB67ec95F232507601A73',
-        [EndpointId.CODEX_V2_MAINNET]: '0x0000000000000000000000000000000000000000',
         [EndpointId.COREDAO_V2_MAINNET]: '0x7fe673201724925b5c477d4e1a4bd3e954688cf5',
         [EndpointId.CRONOSEVM_V2_MAINNET]: '0xdd7b5e1db4aafd5c8ec3b764efb8ed265aa5445b',
-        [EndpointId.CRONOSZKEVM_V2_MAINNET]: '0x0000000000000000000000000000000000000000',
         [EndpointId.DEGEN_V2_MAINNET]: '0x8d77d35604a9f37f488e41d1d916b2a0088f82dd',
-        [EndpointId.EBI_V2_MAINNET]: '0x0000000000000000000000000000000000000000',
         [EndpointId.EDU_V2_MAINNET]: '0xdd7b5e1db4aafd5c8ec3b764efb8ed265aa5445b',
         [EndpointId.ETHEREUM_V2_MAINNET]: '0xa59BA433ac34D2927232918Ef5B2eaAfcF130BA5',
         [EndpointId.FLARE_V2_MAINNET]: '0x9bcd17a654bffaa6f8fea38d19661a7210e22196',
@@ -56,9 +54,10 @@ export const DVNS = {
         [EndpointId.METIS_V2_MAINNET]: '0x6ABdb569Dc985504cCcB541ADE8445E5266e7388',
         [EndpointId.NIBIRU_V2_MAINNET]: '0xdd7b5e1db4aafd5c8ec3b764efb8ed265aa5445b',
         [EndpointId.OPTIMISM_V2_MAINNET]: '0xa7b5189bcA84Cd304D8553977c7C614329750d99',
+        [EndpointId.OG_V2_MAINNET]: '0x95729ea44326f8add8a9b1d987279dbdc1dd3dff',
         [EndpointId.ORDERLY_V2_MAINNET]: '0x6a4c9096f162f0ab3c0517b0a40dc1ce44785e16',
         [EndpointId.PEAQ_V2_MAINNET]: '0x725fafe20b74ff6f88daea0c506190a8f1037635',
-        [EndpointId.PLUME_V2_MAINNET]: '0x0000000000000000000000000000000000000000',
+        [EndpointId.PLASMA_V2_MAINNET]: '0xa51ce237fafa3052d5d3308df38a024724bb1274',
         [EndpointId.PLUMEPHOENIX_V2_MAINNET]: '0x882a1ee8891c7d22310dedf032ef9653785532b8',
         [EndpointId.POLYGON_V2_MAINNET]: '0x31F748a368a893Bdb5aBB67ec95F232507601A73',
         [EndpointId.RARIBLE_V2_MAINNET]: '0xb53648ca1aa054a80159c1175c03679fdc76bf88',
@@ -75,10 +74,8 @@ export const DVNS = {
         [EndpointId.TAIKO_V2_MAINNET]: '0xdd7b5e1db4aafd5c8ec3b764efb8ed265aa5445b',
         [EndpointId.TELOS_V2_MAINNET]: '0x809cde2afcf8627312e87a6a7bbffab3f8f347c7',
         [EndpointId.UNICHAIN_V2_MAINNET]: '0x25e0e650a78e6304a3983fc4b7ffc6544b1beea6',
-        [EndpointId.XCHAIN_V2_MAINNET]: '0x0000000000000000000000000000000000000000',
         [EndpointId.XDC_V2_MAINNET]: '0x1294e3347ec64fd63e1d0594dc1294247cd237c7',
         [EndpointId.ZKCONSENSYS_V2_MAINNET]: '0xDd7B5E1dB4AaFd5C8EC3b764eFB8ed265Aa5445B',
-        // [EndpointId.ZKSYNC_V2_MAINNET]: '0xb183c2b91cf76cAd13602b32ADa2Fd273f19009C',
     } satisfies Partial<Record<EndpointId, string>>,
     LZ_LABS: {
         [EndpointId.ARBITRUM_V2_MAINNET]: '0x2f55C492897526677C5B68fb199ea31E2c126416',
@@ -86,7 +83,6 @@ export const DVNS = {
         [EndpointId.AVALANCHE_V2_MAINNET]: '0x962F502A63F5FBeB44DC9ab932122648E8352959',
         [EndpointId.BASE_V2_MAINNET]: '0x9e059a54699a285714207b43B055483E78FAac25',
         [EndpointId.BSC_V2_MAINNET]: '0xfD6865c841c2d64565562fCc7e05e619A30615f0',
-        [EndpointId.EBI_V2_MAINNET]: '0x0000000000000000000000000000000000000000',
         [EndpointId.ETHEREUM_V2_MAINNET]: '0x589dEDbD617e0CBcB916A9223F4d1300c294236b',
         [EndpointId.KAVA_V2_MAINNET]: '0x2D40A7B66F776345Cf763c8EBB83199Cd285e7a3',
         [EndpointId.KLAYTN_V2_MAINNET]: '0xc80233AD8251E668BecbC3B0415707fC7075501e',
@@ -97,11 +93,11 @@ export const DVNS = {
         [EndpointId.RARIBLE_V2_MAINNET]: '0x0b5E5452d0c9DA1Bb5fB0664F48313e9667d7820',
         [EndpointId.SCROLL_V2_MAINNET]: '0xbe0d08a85EeBFCC6eDA0A843521f7CBB1180D2e2',
         [EndpointId.ZKCONSENSYS_V2_MAINNET]: '0x129Ee430Cb2Ff2708CCADDBDb408a88Fe4FFd480',
-        // [EndpointId.ZKSYNC_V2_MAINNET]: '0x620A9DF73D2F1015eA75aea1067227F9013f5C51',
     } satisfies Partial<Record<EndpointId, string>>,
     STG: {
         [EndpointId.ABSTRACT_V2_MAINNET]: '0xcec9f0a49073ac4a1c439d06cb9448512389a64e',
         [EndpointId.APE_V2_MAINNET]: '0x794c0b0071d4a926c443468f027912e693678151',
+        [EndpointId.APEXFUSIONNEXUS_V2_MAINNET]: '0x313328609a9c38459cae56625fff7f2ad6dcde3b',
         [EndpointId.ARBITRUM_V2_MAINNET]: '0x5756a74e8e18d8392605ba667171962b2b2826b5',
         [EndpointId.AURORA_V2_MAINNET]: '0xe11c808bc6099abc9be566c9017aa2ab0f131d35',
         [EndpointId.AVALANCHE_V2_MAINNET]: '0x252b234545e154543ad2784c7111eb90406be836',
@@ -109,12 +105,9 @@ export const DVNS = {
         [EndpointId.BERA_V2_MAINNET]: '0x6e70fcdc42d3d63748b7d8883399dcb16bbb5c8c',
         [EndpointId.BOTANIX_V2_MAINNET]: '0xdd7b5e1db4aafd5c8ec3b764efb8ed265aa5445b',
         [EndpointId.BSC_V2_MAINNET]: '0xac8de74ce0a44a5e73bbc709fe800406f58431e0',
-        [EndpointId.CODEX_V2_MAINNET]: '0x0000000000000000000000000000000000000000',
         [EndpointId.COREDAO_V2_MAINNET]: '0xe6cd8c2e46ef396df88048449e5b1c75172b40c3',
         [EndpointId.CRONOSEVM_V2_MAINNET]: '0x2ae36a544b904f2f2960f6fd1a6084b4b11ba334',
-        [EndpointId.CRONOSZKEVM_V2_MAINNET]: '0x0000000000000000000000000000000000000000',
         [EndpointId.DEGEN_V2_MAINNET]: '0x80442151791bbdd89117719e508115ebc1ce2d93',
-        [EndpointId.EBI_V2_MAINNET]: '0x0000000000000000000000000000000000000000',
         [EndpointId.EDU_V2_MAINNET]: '0x97f930a15172f38b7e947778889424e37b5df316',
         [EndpointId.ETHEREUM_V2_MAINNET]: '0x8fafae7dd957044088b3d0f67359c327c6200d18',
         [EndpointId.FLARE_V2_MAINNET]: '0x8d77d35604a9f37f488e41d1d916b2a0088f82dd',
@@ -136,10 +129,11 @@ export const DVNS = {
         [EndpointId.MANTLE_V2_MAINNET]: '0xfe809470016196573d64a8d17a745bebea4ecc41',
         [EndpointId.METIS_V2_MAINNET]: '0x61a1b61a1087be03abedc04900cfcc1c14187237',
         [EndpointId.NIBIRU_V2_MAINNET]: '0x06d99ffd7c09ea72e962a06b6e311e513d7c3d20',
+        [EndpointId.OG_V2_MAINNET]: '0x8d77d35604a9f37f488e41d1d916b2a0088f82dd',
         [EndpointId.OPTIMISM_V2_MAINNET]: '0xfe6507f094155cabb4784403cd784c2df04122dd',
         [EndpointId.ORDERLY_V2_MAINNET]: '0xd074b6bbcbec2f2b4c4265de3d95e521f82bf669',
         [EndpointId.PEAQ_V2_MAINNET]: '0x18f76f0d8ccd176bbe59b3870fa486d1fff87026',
-        [EndpointId.PLUME_V2_MAINNET]: '0x0000000000000000000000000000000000000000',
+        [EndpointId.PLASMA_V2_MAINNET]: '0xabc9b1819cc4d9846550f928b985993cf6240439',
         [EndpointId.PLUMEPHOENIX_V2_MAINNET]: '0xdd7b5e1db4aafd5c8ec3b764efb8ed265aa5445b',
         [EndpointId.POLYGON_V2_MAINNET]: '0xc79f0b1bcb7cdae9f9ba547dcfc57cbfcd2993a5',
         [EndpointId.RARIBLE_V2_MAINNET]: '0x2fa870cee4da57de84d1db36759d4716ad7e5038',
@@ -156,10 +150,8 @@ export const DVNS = {
         [EndpointId.TAIKO_V2_MAINNET]: '0x37473676ff697f2eba29c8a3105309abf00ba013',
         [EndpointId.TELOS_V2_MAINNET]: '0xa80aa110f05c9c6140018aae0c4e08a70f43350d',
         [EndpointId.UNICHAIN_V2_MAINNET]: '0x9885110b909e88bb94f7f767a68ec2558b2afa73',
-        [EndpointId.XCHAIN_V2_MAINNET]: '0x0000000000000000000000000000000000000000',
         [EndpointId.XDC_V2_MAINNET]: '0x4fe90e0f2a99e464d6e97b161d72101cd03c20fe',
         [EndpointId.ZKCONSENSYS_V2_MAINNET]: '0xef269bbadb81de86e4b3278fa1dae1723545268b',
-        // [EndpointId.ZKSYNC_V2_MAINNET]: '0x62aa89bad332788021f6f4f4fb196d5fe59c27a6',
     } satisfies Partial<Record<EndpointId, string>>,
 }
 
@@ -170,6 +162,7 @@ export const EXECUTORS = {
     LZ_LABS: {
         [EndpointId.ABSTRACT_V2_MAINNET]: '0x643E1471f37c4680Df30cF0C540Cd379a0fF58A5',
         [EndpointId.APE_V2_MAINNET]: '0xcCE466a522984415bC91338c232d98869193D46e',
+        [EndpointId.APEXFUSIONNEXUS_V2_MAINNET]: '0x4208D6E27538189bB48E603D6123A94b8Abe0A0b',
         [EndpointId.ARBITRUM_V2_MAINNET]: '0x31CAe3B7fB82d847621859fb1585353c5720660D',
         [EndpointId.AURORA_V2_MAINNET]: '0xA2b402FFE8dd7460a8b425644B6B9f50667f0A61',
         [EndpointId.AVALANCHE_V2_MAINNET]: '0x90E595783E43eb89fF07f63d27B8430e6B44bD9c',
@@ -177,12 +170,9 @@ export const EXECUTORS = {
         [EndpointId.BERA_V2_MAINNET]: '0x4208D6E27538189bB48E603D6123A94b8Abe0A0b',
         [EndpointId.BOTANIX_V2_MAINNET]: '0x4208D6E27538189bB48E603D6123A94b8Abe0A0b',
         [EndpointId.BSC_V2_MAINNET]: '0x3ebD570ed38B1b3b4BC886999fcF507e9D584859',
-        [EndpointId.CODEX_V2_MAINNET]: '0x0000000000000000000000000000000000000000',
         [EndpointId.COREDAO_V2_MAINNET]: '0x1785c94d31E3E3Ab1079e7ca8a9fbDf33EEf9dd5',
         [EndpointId.CRONOSEVM_V2_MAINNET]: '0x4b80F7d25c451D204b1C93D9bdf2aB3B04f3EA4a',
-        [EndpointId.CRONOSZKEVM_V2_MAINNET]: '0x0000000000000000000000000000000000000000',
         [EndpointId.DEGEN_V2_MAINNET]: '0xc097ab8CD7b053326DFe9fB3E3a31a0CCe3B526f',
-        [EndpointId.EBI_V2_MAINNET]: '0x0000000000000000000000000000000000000000',
         [EndpointId.EDU_V2_MAINNET]: '0x41Bdb4aa4A63a5b2Efc531858d3118392B1A1C3d',
         [EndpointId.ETHEREUM_V2_MAINNET]: '0x173272739Bd7Aa6e4e214714048a9fE699453059',
         [EndpointId.FLARE_V2_MAINNET]: '0xcCE466a522984415bC91338c232d98869193D46e',
@@ -204,10 +194,11 @@ export const EXECUTORS = {
         [EndpointId.MANTLE_V2_MAINNET]: '0x4Fc3f4A38Acd6E4cC0ccBc04B3Dd1CCAeFd7F3Cd',
         [EndpointId.METIS_V2_MAINNET]: '0xE6AB3B3E632f3C65c3cb4c250DcC42f5E915A1cf',
         [EndpointId.NIBIRU_V2_MAINNET]: '0x6A02D83e8d433304bba74EF1c427913958187142',
+        [EndpointId.OG_V2_MAINNET]: '0xa20DB4Ffe74A31D17fc24BD32a7DD7555441058e',
         [EndpointId.OPTIMISM_V2_MAINNET]: '0x2D2ea0697bdbede3F01553D2Ae4B8d0c486B666e',
         [EndpointId.ORDERLY_V2_MAINNET]: '0x1aCe9DD1BC743aD036eF2D92Af42Ca70A1159df5',
         [EndpointId.PEAQ_V2_MAINNET]: '0xcCE466a522984415bC91338c232d98869193D46e',
-        [EndpointId.PLUME_V2_MAINNET]: '0x0000000000000000000000000000000000000000',
+        [EndpointId.PLASMA_V2_MAINNET]: '0x4208D6E27538189bB48E603D6123A94b8Abe0A0b',
         [EndpointId.PLUMEPHOENIX_V2_MAINNET]: '0x41Bdb4aa4A63a5b2Efc531858d3118392B1A1C3d',
         [EndpointId.POLYGON_V2_MAINNET]: '0xCd3F213AD101472e1713C72B1697E727C803885b',
         [EndpointId.RARIBLE_V2_MAINNET]: '0x1E4CAc6c2c955cAED779ef24d5B8C5EE90b1f914',
@@ -224,10 +215,8 @@ export const EXECUTORS = {
         [EndpointId.TAIKO_V2_MAINNET]: '0xa20DB4Ffe74A31D17fc24BD32a7DD7555441058e',
         [EndpointId.TELOS_V2_MAINNET]: '0x1785c94d31E3E3Ab1079e7ca8a9fbDf33EEf9dd5',
         [EndpointId.UNICHAIN_V2_MAINNET]: '0x4208D6E27538189bB48E603D6123A94b8Abe0A0b',
-        [EndpointId.XCHAIN_V2_MAINNET]: '0x0000000000000000000000000000000000000000',
         [EndpointId.XDC_V2_MAINNET]: '0xa20DB4Ffe74A31D17fc24BD32a7DD7555441058e',
         [EndpointId.ZKCONSENSYS_V2_MAINNET]: '0x0408804C5dcD9796F22558464E6fE5bDdF16A7c7',
-        // [EndpointId.ZKSYNC_V2_MAINNET]: '0x664e390e672A811c12091db8426cBb7d68D5D8A6',
     } satisfies Partial<Record<EndpointId, string>>,
 }
 
@@ -378,10 +367,21 @@ export const ASSETS: Record<TokenName, AssetConfig> = {
                 name: 'WETH',
                 type: StargateType.Oft,
             },
+            [EndpointId.OG_V2_MAINNET]: {
+                symbol: 'WETH',
+                name: 'WETH',
+                type: StargateType.Oft,
+            },
             [EndpointId.OPTIMISM_V2_MAINNET]: {
                 type: StargateType.Native,
             },
             [EndpointId.PEAQ_V2_MAINNET]: {
+                symbol: 'WETH',
+                name: 'WETH',
+                type: StargateType.Oft,
+            },
+
+            [EndpointId.PLASMA_V2_MAINNET]: {
                 symbol: 'WETH',
                 name: 'WETH',
                 type: StargateType.Oft,
@@ -590,6 +590,10 @@ export const ASSETS: Record<TokenName, AssetConfig> = {
                 type: StargateType.Oft,
                 address: '0x43F2376D5D03553aE72F4A8093bbe9de4336EB08',
             },
+            [EndpointId.OG_V2_MAINNET]: {
+                type: StargateType.Oft,
+                address: '0x9FBBAFC2Ad79af2b57eD23C60DfF79eF5c2b0FB5',
+            },
             [EndpointId.OPTIMISM_V2_MAINNET]: {
                 type: StargateType.Pool,
                 address: '0x94b008aa00579c1307b0ef2c499ad98a8ce58e58',
@@ -700,6 +704,10 @@ export const ASSETS: Record<TokenName, AssetConfig> = {
             [EndpointId.APE_V2_MAINNET]: {
                 type: StargateType.Oft,
                 address: '0xF1815bd50389c46847f0Bda824eC8da914045D14',
+            },
+            [EndpointId.APEXFUSIONNEXUS_V2_MAINNET]: {
+                type: StargateType.Oft,
+                address: '0x8a2B28364102Bea189D99A475C494330Ef2bDD0B',
             },
             [EndpointId.ARBITRUM_V2_MAINNET]: {
                 address: '0xaf88d065e77c8cc2239327c5edb3a432268e5831',
@@ -813,6 +821,10 @@ export const ASSETS: Record<TokenName, AssetConfig> = {
             [EndpointId.NIBIRU_V2_MAINNET]: {
                 type: StargateType.Oft,
                 address: '0x0829F361A05D993d5CEb035cA6DF3446b060970b',
+            },
+            [EndpointId.OG_V2_MAINNET]: {
+                type: StargateType.Oft,
+                address: '0x8a2B28364102Bea189D99A475C494330Ef2bDD0B',
             },
             [EndpointId.OPTIMISM_V2_MAINNET]: {
                 address: '0x0b2c639c533813f4aa9d7837caf62653d097ff85',
@@ -980,6 +992,26 @@ export const ASSETS: Record<TokenName, AssetConfig> = {
             //
             // MAINNET
             //
+            [EndpointId.AVALANCHE_V2_MAINNET]: {
+                address: '0xc891eb4cbdeff6e073e859e987815ed1505c2acd',
+                type: StargateType.Pool,
+            },
+            [EndpointId.BASE_V2_MAINNET]: {
+                address: '0x60a3e35cc302bfa44cb288bc5a4f316fdb1adb42',
+                type: StargateType.Pool,
+            },
+            [EndpointId.BERA_V2_MAINNET]: {
+                address: '0x12a272A581feE5577A5dFa371afEB4b2F3a8C2F8',
+                type: StargateType.Oft,
+            },
+            [EndpointId.ETHEREUM_V2_MAINNET]: {
+                address: '0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c',
+                type: StargateType.Pool,
+            },
+            [EndpointId.PLUMEPHOENIX_V2_MAINNET]: {
+                address: '0x94DaD7d9f37C815Eb4dDC611E6460CC5F6617fA0',
+                type: StargateType.Oft,
+            },
 
             //
             // TESTNET
@@ -1010,6 +1042,7 @@ export const OFT_WRAPPER: OftWrapperConfig = {
         //
         [EndpointId.ABSTRACT_V2_MAINNET]: {},
         [EndpointId.APE_V2_MAINNET]: {},
+        [EndpointId.APEXFUSIONNEXUS_V2_MAINNET]: {},
         [EndpointId.ARBITRUM_V2_MAINNET]: {},
         [EndpointId.ASTAR_V2_MAINNET]: {},
         [EndpointId.AURORA_V2_MAINNET]: {},
@@ -1049,10 +1082,12 @@ export const OFT_WRAPPER: OftWrapperConfig = {
         [EndpointId.MOONBEAM_V2_MAINNET]: {},
         [EndpointId.MOONRIVER_V2_MAINNET]: {},
         [EndpointId.NIBIRU_V2_MAINNET]: {},
+        [EndpointId.OG_V2_MAINNET]: {},
         [EndpointId.OPBNB_V2_MAINNET]: {},
         [EndpointId.OPTIMISM_V2_MAINNET]: {},
         [EndpointId.ORDERLY_V2_MAINNET]: {},
         [EndpointId.PEAQ_V2_MAINNET]: {},
+        [EndpointId.PLASMA_V2_MAINNET]: {},
         [EndpointId.PLUMEPHOENIX_V2_MAINNET]: {},
         [EndpointId.POLYGON_V2_MAINNET]: {},
         [EndpointId.RARIBLE_V2_MAINNET]: {},
@@ -1073,7 +1108,6 @@ export const OFT_WRAPPER: OftWrapperConfig = {
         [EndpointId.XDC_V2_MAINNET]: {},
         [EndpointId.ZKCONSENSYS_V2_MAINNET]: {},
         [EndpointId.ZKPOLYGON_V2_MAINNET]: {},
-        [EndpointId.ZKSYNC_V2_MAINNET]: {},
 
         //
         // TESTNET
@@ -1294,7 +1328,19 @@ export const REWARDS: RewardsConfig = {
     },
     [RewardTokenName.EURC]: {
         name: 'EURC',
-        networks: {},
+        networks: {
+            //
+            // Mainnet
+            [EndpointId.AVALANCHE_V2_MAINNET]: {
+                address: '0xc891eb4cbdeff6e073e859e987815ed1505c2acd',
+            },
+            [EndpointId.BASE_V2_MAINNET]: {
+                address: '0x60a3e35cc302bfa44cb288bc5a4f316fdb1adb42',
+            },
+            [EndpointId.ETHEREUM_V2_MAINNET]: {
+                address: '0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c',
+            },
+        },
     },
 }
 
@@ -1313,6 +1359,10 @@ export const NETWORKS: NetworksConfig = {
             requiredDVNs: [DVNS.NETHERMIND[EndpointId.ABSTRACT_V2_MAINNET], DVNS.STG[EndpointId.ABSTRACT_V2_MAINNET]],
             executor: EXECUTORS.LZ_LABS[EndpointId.ABSTRACT_V2_MAINNET],
             nativeDropAmount: parseEther('0.0008').toBigInt(),
+        },
+        oneSigConfig: {
+            oneSigAddress: '0x984c4702c4d07973078c481a28adb46d1fe49d75',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/abstract`,
         },
         safeConfig: {
             safeAddress: '0xaF0B7759f24AA346a857dc17E9Ef965b023D5c8E',
@@ -1343,6 +1393,10 @@ export const NETWORKS: NetworksConfig = {
             executor: EXECUTORS.LZ_LABS[EndpointId.APE_V2_MAINNET],
             nativeDropAmount: parseEther('0.1').toBigInt(),
         },
+        oneSigConfig: {
+            oneSigAddress: '0x1ba45d65782f69daa454c5ff4e773856926fdcf6',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/ape`,
+        },
         safeConfig: {
             safeAddress: '0x4a43eCB40A35795545192875E2Bb6866F6f91da8',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/ape`,
@@ -1360,6 +1414,29 @@ export const NETWORKS: NetworksConfig = {
             },
         },
     },
+    [EndpointId.APEXFUSIONNEXUS_V2_MAINNET]: {
+        creditMessaging: {
+            ...DEFAULT_CREDIT_MESSAGING_NETWORK_CONFIG,
+            requiredDVNs: [
+                DVNS.NETHERMIND[EndpointId.APEXFUSIONNEXUS_V2_MAINNET],
+                DVNS.STG[EndpointId.APEXFUSIONNEXUS_V2_MAINNET],
+            ],
+            executor: EXECUTORS.LZ_LABS[EndpointId.APEXFUSIONNEXUS_V2_MAINNET],
+        },
+        tokenMessaging: {
+            ...DEFAULT_TOKEN_MESSAGING_NETWORK_CONFIG,
+            requiredDVNs: [
+                DVNS.NETHERMIND[EndpointId.APEXFUSIONNEXUS_V2_MAINNET],
+                DVNS.STG[EndpointId.APEXFUSIONNEXUS_V2_MAINNET],
+            ],
+            executor: EXECUTORS.LZ_LABS[EndpointId.APEXFUSIONNEXUS_V2_MAINNET],
+            nativeDropAmount: parseEther('0.001').toBigInt(),
+        },
+        oneSigConfig: {
+            oneSigAddress: '0x23d1ffcc206ec043c64591da89f9696748698ce8',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/apexfusionnexus`,
+        },
+    },
     [EndpointId.ARBITRUM_V2_MAINNET]: {
         creditMessaging: {
             ...DEFAULT_CREDIT_MESSAGING_NETWORK_CONFIG,
@@ -1374,12 +1451,20 @@ export const NETWORKS: NetworksConfig = {
             busGasLimit: 60000n,
             busRideGasLimit: 55000n,
         },
+        oneSigConfig: {
+            oneSigAddress: '0x184257d5b9e25a12d1dcafb697bfaafe0f5ca150',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/arbitrum`,
+        },
         safeConfig: {
             safeAddress: '0x9CD50907aeb5D16F29Bddf7e1aBb10018Ee8717d',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/arbitrum`,
         },
     },
     [EndpointId.ASTAR_V2_MAINNET]: {
+        oneSigConfig: {
+            oneSigAddress: '0x8c8a79427d31abec383fe8697b235429aeee481e',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/astar`,
+        },
         safeConfig: {
             safeAddress: '0x5d3917b47e963ec703ed66da6637c701365ff500',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/astar`,
@@ -1397,6 +1482,10 @@ export const NETWORKS: NetworksConfig = {
             executor: EXECUTORS.LZ_LABS[EndpointId.AURORA_V2_MAINNET],
             nativeDropAmount: parseEther('0.00005').toBigInt(),
         },
+        oneSigConfig: {
+            oneSigAddress: '0x4469467be9eb66c025518db796aee2ed7e9c6e0d',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/aurora`,
+        },
         safeConfig: {
             safeAddress: '0x5D3917b47E963eC703eD66Da6637C701365fF500',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/aurora`,
@@ -1413,6 +1502,10 @@ export const NETWORKS: NetworksConfig = {
             requiredDVNs: [DVNS.NETHERMIND[EndpointId.AVALANCHE_V2_MAINNET], DVNS.STG[EndpointId.AVALANCHE_V2_MAINNET]],
             executor: EXECUTORS.LZ_LABS[EndpointId.AVALANCHE_V2_MAINNET],
             nativeDropAmount: parseEther('0.018').toBigInt(),
+        },
+        oneSigConfig: {
+            oneSigAddress: '0x18a0b14478f40abf89594bfe1afa6f9e6a4f9a3a',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/avalanche`,
         },
         safeConfig: {
             safeAddress: '0x2B065946d41ADf43BBc3BaF8118ae94Ed19D7A40',
@@ -1433,6 +1526,10 @@ export const NETWORKS: NetworksConfig = {
             busGasLimit: 60000n,
             busRideGasLimit: 55000n,
         },
+        oneSigConfig: {
+            oneSigAddress: '0x7c20d58cb9f3f3cf73b79a3fbda3fff412d7d82d',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/base`,
+        },
         safeConfig: {
             safeAddress: '0x81EAb64E630C4a2E3E849268A6B64cb76D1C8109',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/base`,
@@ -1452,6 +1549,10 @@ export const NETWORKS: NetworksConfig = {
             busGasLimit: 60000n,
             nativeDropGasLimit: 30000n,
         },
+        oneSigConfig: {
+            oneSigAddress: '0x64a83552ed614c5136327a30e76dbb52e871737e',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/bera`,
+        },
         safeConfig: {
             safeAddress: '0x5A185C81AFa796a753dd662343cbF911254f796e',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/bera`,
@@ -1470,6 +1571,10 @@ export const NETWORKS: NetworksConfig = {
         },
     },
     [EndpointId.BLAST_V2_MAINNET]: {
+        oneSigConfig: {
+            oneSigAddress: '0x91463637898cce4fecb66fb3df4c73126eeed1b1',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/blast`,
+        },
         safeConfig: {
             safeAddress: '0xc53329FD24f3a446b7c3a804Ebc53515c0244012',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/blast`,
@@ -1486,6 +1591,10 @@ export const NETWORKS: NetworksConfig = {
             requiredDVNs: [DVNS.NETHERMIND[EndpointId.BOTANIX_V2_MAINNET], DVNS.STG[EndpointId.BOTANIX_V2_MAINNET]],
             executor: EXECUTORS.LZ_LABS[EndpointId.BOTANIX_V2_MAINNET],
             nativeDropAmount: parseEther('0.000000000003').toBigInt(),
+        },
+        oneSigConfig: {
+            oneSigAddress: '0x2f0e1fdc3028720a6191cdfcf2cc4fe9027cdf5a',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/botanix`,
         },
         safeConfig: {
             safeAddress: '0xAC9DFe100F75DC72b68155e99861ECe5A05f72ec',
@@ -1516,38 +1625,13 @@ export const NETWORKS: NetworksConfig = {
             executor: EXECUTORS.LZ_LABS[EndpointId.BSC_V2_MAINNET],
             nativeDropAmount: parseEther('0.0012').toBigInt(),
         },
+        oneSigConfig: {
+            oneSigAddress: '0x2f7d714632ec8aa70061e536ee645ffbb4f289ef',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/bsc`,
+        },
         safeConfig: {
             safeAddress: '0x6e690075eedBC52244Dd4822D9F7887d4f27442F',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/bsc`,
-        },
-    },
-    [EndpointId.CODEX_V2_MAINNET]: {
-        creditMessaging: {
-            ...DEFAULT_CREDIT_MESSAGING_NETWORK_CONFIG,
-            requiredDVNs: [DVNS.NETHERMIND[EndpointId.CODEX_V2_MAINNET], DVNS.STG[EndpointId.CODEX_V2_MAINNET]],
-            executor: EXECUTORS.LZ_LABS[EndpointId.CODEX_V2_MAINNET],
-        },
-        tokenMessaging: {
-            ...DEFAULT_TOKEN_MESSAGING_NETWORK_CONFIG,
-            requiredDVNs: [DVNS.NETHERMIND[EndpointId.CODEX_V2_MAINNET], DVNS.STG[EndpointId.CODEX_V2_MAINNET]],
-            executor: EXECUTORS.LZ_LABS[EndpointId.CODEX_V2_MAINNET],
-            nativeDropAmount: parseEther('0.001').toBigInt(),
-        },
-        safeConfig: {
-            safeAddress: '0x539bd5B55eBFb8EfEDc51f115d96FE9705027621',
-            safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/codex`,
-            contractNetworks: {
-                [81224]: {
-                    multiSendAddress: '0x00B3FA8E2020e93Cc092508C61DcCa70425635E3',
-                    multiSendCallOnlyAddress: '0xddE16aA6EA27d17c83D43C8f62f828427Ae9848d',
-                    safeMasterCopyAddress: '0xA042C3543E6b546a34ECe6411cD3E3093e7551ec',
-                    safeProxyFactoryAddress: '0x3Dc5fA91e051BB23051Fd424125bc90f24A7DFB9',
-                    fallbackHandlerAddress: '0x075bB7db8EbE09E507295A9Be57da19DEA01aa3B',
-                    createCallAddress: '0x5BF7D6509be83C1e0AA5b9C0bCaF81d626204848',
-                    signMessageLibAddress: '0x9DE94C4F9AB1E1157d3637E04bD96fb8A8143401',
-                    simulateTxAccessorAddress: '0xa60175Fe4Ea218afE3C5dD23203a0fe82BDB6638',
-                },
-            },
         },
     },
     [EndpointId.COREDAO_V2_MAINNET]: {
@@ -1561,6 +1645,10 @@ export const NETWORKS: NetworksConfig = {
             requiredDVNs: [DVNS.NETHERMIND[EndpointId.COREDAO_V2_MAINNET], DVNS.STG[EndpointId.COREDAO_V2_MAINNET]],
             executor: EXECUTORS.LZ_LABS[EndpointId.COREDAO_V2_MAINNET],
             nativeDropAmount: parseEther('0.1').toBigInt(),
+        },
+        oneSigConfig: {
+            oneSigAddress: '0x6312c1793a767f98f069459ff678c9409d1c2f44',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/coredao`,
         },
         safeConfig: {
             safeAddress: '0x43303706f215A53220291F0B8a896BCDA5EB709E',
@@ -1579,6 +1667,10 @@ export const NETWORKS: NetworksConfig = {
             executor: EXECUTORS.LZ_LABS[EndpointId.CRONOSEVM_V2_MAINNET],
             nativeDropAmount: parseEther('5').toBigInt(),
         },
+        oneSigConfig: {
+            oneSigAddress: '0x5ab51e3fa70538d01e9579add517e732abe582ad',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/cronosevm`,
+        },
         safeConfig: {
             safeAddress: '0x7F433ac60E7400479a734e8264Eb0B772E6fD2Ad',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/cronosevm`,
@@ -1596,41 +1688,6 @@ export const NETWORKS: NetworksConfig = {
             },
         },
     },
-    [EndpointId.CRONOSZKEVM_V2_MAINNET]: {
-        creditMessaging: {
-            ...DEFAULT_CREDIT_MESSAGING_NETWORK_CONFIG,
-            requiredDVNs: [
-                DVNS.NETHERMIND[EndpointId.CRONOSZKEVM_V2_MAINNET],
-                DVNS.STG[EndpointId.CRONOSZKEVM_V2_MAINNET],
-            ],
-            executor: EXECUTORS.LZ_LABS[EndpointId.CRONOSZKEVM_V2_MAINNET],
-        },
-        tokenMessaging: {
-            ...DEFAULT_TOKEN_MESSAGING_NETWORK_CONFIG,
-            requiredDVNs: [
-                DVNS.NETHERMIND[EndpointId.CRONOSZKEVM_V2_MAINNET],
-                DVNS.STG[EndpointId.CRONOSZKEVM_V2_MAINNET],
-            ],
-            executor: EXECUTORS.LZ_LABS[EndpointId.CRONOSZKEVM_V2_MAINNET],
-            nativeDropAmount: parseEther('2').toBigInt(),
-        },
-        safeConfig: {
-            safeAddress: '0x3cC43e322FE7CCd49F0cc5dB3FE35e5Ee8359b06',
-            safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/cronoszkevm`,
-            contractNetworks: {
-                [388]: {
-                    multiSendAddress: '0x0dFcccB95225ffB03c6FBB2559B530C2B7C8A912',
-                    multiSendCallOnlyAddress: '0xf220D3b4DFb23C4ade8C88E526C1353AbAcbC38F',
-                    safeMasterCopyAddress: '0x1727c2c531cf966f902E5927b98490fDFb3b2b70',
-                    safeProxyFactoryAddress: '0xDAec33641865E4651fB43181C6DB6f7232Ee91c2',
-                    fallbackHandlerAddress: '0x2f870a80647BbC554F3a0EBD093f11B4d2a7492A',
-                    createCallAddress: '0xcB8e5E438c5c2b45FbE17B02Ca9aF91509a8ad56',
-                    signMessageLibAddress: '0x357147caf9C0cCa67DfA0CF5369318d8193c8407',
-                    simulateTxAccessorAddress: '0x4191E2e12E8BC5002424CE0c51f9947b02675a44',
-                },
-            },
-        },
-    },
     [EndpointId.DEGEN_V2_MAINNET]: {
         creditMessaging: {
             ...DEFAULT_CREDIT_MESSAGING_NETWORK_CONFIG,
@@ -1642,6 +1699,10 @@ export const NETWORKS: NetworksConfig = {
             requiredDVNs: [DVNS.NETHERMIND[EndpointId.DEGEN_V2_MAINNET], DVNS.STG[EndpointId.DEGEN_V2_MAINNET]],
             executor: EXECUTORS.LZ_LABS[EndpointId.DEGEN_V2_MAINNET],
             nativeDropAmount: parseEther('5').toBigInt(),
+        },
+        oneSigConfig: {
+            oneSigAddress: '0xa867fda1cad13183c87f397c87077ffa8f7cfb83',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/degen`,
         },
         safeConfig: {
             safeAddress: '0x2F2F0C7097926e66a31A72BA956cf99DB6aeAe4A',
@@ -1672,6 +1733,10 @@ export const NETWORKS: NetworksConfig = {
             executor: EXECUTORS.LZ_LABS[EndpointId.EDU_V2_MAINNET],
             nativeDropAmount: parseEther('0.5').toBigInt(),
         },
+        oneSigConfig: {
+            oneSigAddress: '0x74e86b7a210278eddc8153572854e2919cb561dd',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/edu`,
+        },
         safeConfig: {
             safeAddress: '0x720573EcD27d279a28812347B2fd73dF857EB774',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/edu`,
@@ -1689,35 +1754,6 @@ export const NETWORKS: NetworksConfig = {
             },
         },
     },
-    [EndpointId.EBI_V2_MAINNET]: {
-        creditMessaging: {
-            ...DEFAULT_CREDIT_MESSAGING_NETWORK_CONFIG,
-            requiredDVNs: [DVNS.NETHERMIND[EndpointId.EBI_V2_MAINNET], DVNS.STG[EndpointId.EBI_V2_MAINNET]],
-            executor: EXECUTORS.LZ_LABS[EndpointId.EBI_V2_MAINNET],
-        },
-        tokenMessaging: {
-            ...DEFAULT_TOKEN_MESSAGING_NETWORK_CONFIG,
-            requiredDVNs: [DVNS.NETHERMIND[EndpointId.EBI_V2_MAINNET], DVNS.STG[EndpointId.EBI_V2_MAINNET]],
-            executor: EXECUTORS.LZ_LABS[EndpointId.EBI_V2_MAINNET],
-            nativeDropAmount: parseEther('0.00003').toBigInt(),
-        },
-        safeConfig: {
-            safeAddress: '0xb93Aa694A3De8662E1ca9aD0C811440E48cDFe5E',
-            safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/ebi`,
-            contractNetworks: {
-                [98881]: {
-                    multiSendAddress: '0x00B3FA8E2020e93Cc092508C61DcCa70425635E3',
-                    multiSendCallOnlyAddress: '0xddE16aA6EA27d17c83D43C8f62f828427Ae9848d',
-                    safeMasterCopyAddress: '0xA042C3543E6b546a34ECe6411cD3E3093e7551ec',
-                    safeProxyFactoryAddress: '0x3Dc5fA91e051BB23051Fd424125bc90f24A7DFB9',
-                    fallbackHandlerAddress: '0x075bB7db8EbE09E507295A9Be57da19DEA01aa3B',
-                    createCallAddress: '0x5BF7D6509be83C1e0AA5b9C0bCaF81d626204848',
-                    signMessageLibAddress: '0x9DE94C4F9AB1E1157d3637E04bD96fb8A8143401',
-                    simulateTxAccessorAddress: '0xa60175Fe4Ea218afE3C5dD23203a0fe82BDB6638',
-                },
-            },
-        },
-    },
     [EndpointId.ETHEREUM_V2_MAINNET]: {
         creditMessaging: {
             ...DEFAULT_CREDIT_MESSAGING_NETWORK_CONFIG,
@@ -1730,18 +1766,42 @@ export const NETWORKS: NetworksConfig = {
             executor: EXECUTORS.LZ_LABS[EndpointId.ETHEREUM_V2_MAINNET],
             nativeDropAmount: parseEther('0.0042').toBigInt(),
         },
+        oneSigConfig: {
+            oneSigAddress: '0xbe634b030feaab661300667eaf82510a3a025413',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/ethereum`,
+        },
         safeConfig: {
             safeAddress: '0x65bb797c2B9830d891D87288F029ed8dACc19705',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/ethereum`,
         },
     },
     [EndpointId.ETHERLINK_V2_MAINNET]: {
+        oneSigConfig: {
+            oneSigAddress: '0x7bfe8c68a9e9b2faade9c29e7cc46b78649145c4',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/etherlink`,
+        },
         safeConfig: {
             safeAddress: '0x757A404a44C9fC75136e8901E561ac2bcc9FCE8D',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/etherlink`,
+            contractNetworks: {
+                [42793]: {
+                    multiSendAddress: '0xA238CBeb142c10Ef7Ad8442C6D1f9E89e07e7761',
+                    multiSendCallOnlyAddress: '0x40A2aCCbd92BCA938b02010E17A5b8929b49130D',
+                    safeMasterCopyAddress: '0x3E5c63644E683549055b9Be8653de26E0B4CD36E',
+                    safeProxyFactoryAddress: '0xa6B71E26C5e0845f74c812102Ca7114b6a896AB2',
+                    fallbackHandlerAddress: '0xf48f2B2d2a534e402487b3ee7C18c33Aec0Fe5e4',
+                    createCallAddress: '0x7cbB62EaA69F79e6873cD1ecB2392971036cFAa4',
+                    signMessageLibAddress: '0xA65387F16B013cf2Af4605Ad8aA5ec25a2cbA3a2',
+                    simulateTxAccessorAddress: '0x59AD6735bCd8152B84860Cb256dD9e96b85F69Da',
+                },
+            },
         },
     },
     [EndpointId.FANTOM_V2_MAINNET]: {
+        oneSigConfig: {
+            oneSigAddress: '0x34ee86f14fd32868407d42cf14dfad503317354c',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/fantom`,
+        },
         safeConfig: {
             safeAddress: '0x2351BBCb7cF7Ee9D18AF2Be0d106BFc5D47A9E85',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/fantom`,
@@ -1760,6 +1820,10 @@ export const NETWORKS: NetworksConfig = {
             nativeDropAmount: parseEther('3').toBigInt(),
             busGasLimit: 60000n,
             nativeDropGasLimit: 30000n,
+        },
+        oneSigConfig: {
+            oneSigAddress: '0x312ead44717dbd6d4fd335a70ab9f7bf9031c4a2',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/flare`,
         },
         safeConfig: {
             safeAddress: '0x61820502d20a11e90AC0D59305947E177E52d1E9',
@@ -1790,6 +1854,10 @@ export const NETWORKS: NetworksConfig = {
             executor: EXECUTORS.LZ_LABS[EndpointId.FLOW_V2_MAINNET],
             nativeDropAmount: parseEther('0.1').toBigInt(),
         },
+        oneSigConfig: {
+            oneSigAddress: '0x70599fd481a918CA53DBC6C79f8DF8BBBfD919FE',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/flow`,
+        },
         safeConfig: {
             safeAddress: '0xce578Ad2a804BfD2a999a9911609f551B2a940bb',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/flow`,
@@ -1808,6 +1876,10 @@ export const NETWORKS: NetworksConfig = {
         },
     },
     [EndpointId.FRAXTAL_V2_MAINNET]: {
+        oneSigConfig: {
+            oneSigAddress: '0xfb8555e61b938ca8326d0cb88a273e87370d9c57',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/fraxtal`,
+        },
         safeConfig: {
             safeAddress: '0x62B5F0B624301A1F5C0DD998A40Ea7297B26FB90',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/fraxtal`,
@@ -1824,6 +1896,10 @@ export const NETWORKS: NetworksConfig = {
             requiredDVNs: [DVNS.NETHERMIND[EndpointId.FUSE_V2_MAINNET], DVNS.STG[EndpointId.FUSE_V2_MAINNET]],
             executor: EXECUTORS.LZ_LABS[EndpointId.FUSE_V2_MAINNET],
             nativeDropAmount: parseEther('0.1').toBigInt(),
+        },
+        oneSigConfig: {
+            oneSigAddress: '0xeff268107c0231e711cc847c0ed2d8b3974aec48',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/fuse`,
         },
         safeConfig: {
             safeAddress: '0x10fE9418bc6bf06C849c070AE341238B45F8B805',
@@ -1859,6 +1935,10 @@ export const NETWORKS: NetworksConfig = {
             busRideGasLimit: 145000n,
             nativeDropGasLimit: 145000n,
         },
+        oneSigConfig: {
+            oneSigAddress: '0x51fe95869bf8a4a5183043e1eecaaf9dc6908647',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/glue`,
+        },
         safeConfig: {
             safeAddress: '0x6C0d029292f48068f576515c79Fc6bCDec5F58DA',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/glue`,
@@ -1888,6 +1968,10 @@ export const NETWORKS: NetworksConfig = {
             executor: EXECUTORS.LZ_LABS[EndpointId.GNOSIS_V2_MAINNET],
             nativeDropAmount: parseEther('0.0001').toBigInt(),
         },
+        oneSigConfig: {
+            oneSigAddress: '0x55338616f2138e2c2090d97139ea8030a455f6dc',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/gnosis`,
+        },
         safeConfig: {
             safeAddress: '0x92f4BA1931E1A03f5486228502C5f2A2b622dd17',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/gnosis`,
@@ -1904,6 +1988,10 @@ export const NETWORKS: NetworksConfig = {
             requiredDVNs: [DVNS.NETHERMIND[EndpointId.GOAT_V2_MAINNET], DVNS.STG[EndpointId.GOAT_V2_MAINNET]],
             executor: EXECUTORS.LZ_LABS[EndpointId.GOAT_V2_MAINNET],
             nativeDropAmount: parseEther('0.00001').toBigInt(),
+        },
+        oneSigConfig: {
+            oneSigAddress: '0x313bd0ff4cbabf5551bdfbc9329002e9246e1bae',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/goat`,
         },
         safeConfig: {
             safeAddress: '0x93fC2AffA2633C873A74876B76C8e4154579E8Ef',
@@ -1934,6 +2022,10 @@ export const NETWORKS: NetworksConfig = {
             executor: EXECUTORS.LZ_LABS[EndpointId.GRAVITY_V2_MAINNET],
             nativeDropAmount: parseEther('2').toBigInt(),
         },
+        oneSigConfig: {
+            oneSigAddress: '0x312ead44717dbd6d4fd335a70ab9f7bf9031c4a2',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/gravity`,
+        },
         safeConfig: {
             safeAddress: '0xB3e401A59571D4BF5996B0f5FfFE377FbfE71359',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/gravity`,
@@ -1963,6 +2055,10 @@ export const NETWORKS: NetworksConfig = {
             executor: EXECUTORS.LZ_LABS[EndpointId.HEDERA_V2_MAINNET],
             nativeDropAmount: parseUnits('0.5', 8).toBigInt(),
         },
+        oneSigConfig: {
+            oneSigAddress: '0xa15db586f123537078a16f714969b6a73b52879d',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/hedera`,
+        },
         safeConfig: {
             safeAddress: '0xc2cf2825Eb027D8EE8Feb3003d19c466887d9cD4',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/hedera`,
@@ -1991,6 +2087,10 @@ export const NETWORKS: NetworksConfig = {
             requiredDVNs: [DVNS.NETHERMIND[EndpointId.HEMI_V2_MAINNET], DVNS.STG[EndpointId.HEMI_V2_MAINNET]],
             executor: EXECUTORS.LZ_LABS[EndpointId.HEMI_V2_MAINNET],
             nativeDropAmount: parseEther('0.005').toBigInt(),
+        },
+        oneSigConfig: {
+            oneSigAddress: '0xf8513918fc689d0ab0c59d7e781f50edd1970e2c',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/hemi`,
         },
         safeConfig: {
             safeAddress: '0x012c45ab17B7c2AE53CA68046a50bcDf77b46Ad7',
@@ -2024,6 +2124,10 @@ export const NETWORKS: NetworksConfig = {
             busRideGasLimit: 60000n,
             nativeDropGasLimit: 25000n,
         },
+        oneSigConfig: {
+            oneSigAddress: '0x55338616f2138e2c2090d97139ea8030a455f6dc',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/ink`,
+        },
         safeConfig: {
             safeAddress: '0xD4B757c44aC3e849DE1DBd2c9b27CBCDAB3809C3',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/ink`,
@@ -2052,6 +2156,10 @@ export const NETWORKS: NetworksConfig = {
             requiredDVNs: [DVNS.NETHERMIND[EndpointId.IOTA_V2_MAINNET], DVNS.STG[EndpointId.IOTA_V2_MAINNET]],
             executor: EXECUTORS.LZ_LABS[EndpointId.IOTA_V2_MAINNET],
             nativeDropAmount: parseEther('0.01').toBigInt(),
+        },
+        oneSigConfig: {
+            oneSigAddress: '0xeff268107c0231e711cc847c0ed2d8b3974aec48',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/iota`,
         },
         safeConfig: {
             safeAddress: '0x61F36B8575ED9e363a131838dD02b69230253702',
@@ -2082,6 +2190,10 @@ export const NETWORKS: NetworksConfig = {
             executor: EXECUTORS.LZ_LABS[EndpointId.ISLANDER_V2_MAINNET],
             nativeDropAmount: parseEther('0.01').toBigInt(),
         },
+        oneSigConfig: {
+            oneSigAddress: '0xc6f71bd1a4c178780fe62787591bfe3c7eb3160e',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/islander`,
+        },
         safeConfig: {
             safeAddress: '0xce578Ad2a804BfD2a999a9911609f551B2a940bb',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/islander`,
@@ -2111,6 +2223,10 @@ export const NETWORKS: NetworksConfig = {
             executor: EXECUTORS.LZ_LABS[EndpointId.KAVA_V2_MAINNET],
             nativeDropAmount: parseEther('0.001').toBigInt(),
         },
+        oneSigConfig: {
+            oneSigAddress: '0x6312c1793a767f98f069459ff678c9409d1c2f44',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/kava`,
+        },
         safeConfig: {
             safeAddress: '0x424aCEFcd5E9fE8329e3530a214C5e88375b542f',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/kava`,
@@ -2128,6 +2244,10 @@ export const NETWORKS: NetworksConfig = {
             executor: EXECUTORS.LZ_LABS[EndpointId.KLAYTN_V2_MAINNET],
             nativeDropAmount: parseEther('0.043').toBigInt(),
         },
+        oneSigConfig: {
+            oneSigAddress: '0xeff268107c0231e711cc847c0ed2d8b3974aec48',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/klaytn`,
+        },
         safeConfig: {
             safeAddress: '0x9e3c3BBC88DA6123BA09a660766260bB4c35b470',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/klaytn`,
@@ -2144,6 +2264,10 @@ export const NETWORKS: NetworksConfig = {
             requiredDVNs: [DVNS.NETHERMIND[EndpointId.LIGHTLINK_V2_MAINNET], DVNS.STG[EndpointId.LIGHTLINK_V2_MAINNET]],
             executor: EXECUTORS.LZ_LABS[EndpointId.LIGHTLINK_V2_MAINNET],
             nativeDropAmount: parseEther('0.0001').toBigInt(),
+        },
+        oneSigConfig: {
+            oneSigAddress: '0x32b323efc09d5812510b6510b242647c603947ab',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/lightlink`,
         },
         safeConfig: {
             safeAddress: '0xfa6D0b19CE28656079D822f6BBE3714ab1FDd44b',
@@ -2174,6 +2298,10 @@ export const NETWORKS: NetworksConfig = {
             executor: EXECUTORS.LZ_LABS[EndpointId.MANTA_V2_MAINNET],
             nativeDropAmount: parseEther('0.0001').toBigInt(),
         },
+        oneSigConfig: {
+            oneSigAddress: '0xb697c9d99ca0e127bd3aa3fb46b750dc305a3342',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/manta`,
+        },
         safeConfig: {
             safeAddress: '0x3f0DFccF4f7BBc0ed52A212e4d981435a7f27Cc6',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/manta`,
@@ -2203,6 +2331,10 @@ export const NETWORKS: NetworksConfig = {
             executor: EXECUTORS.LZ_LABS[EndpointId.MANTLE_V2_MAINNET],
             nativeDropAmount: parseEther('0.2').toBigInt(),
         },
+        oneSigConfig: {
+            oneSigAddress: '0x25689e691a3a6bb8ee79ca5139abd4e1b1cb76b7',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/mantle`,
+        },
         safeConfig: {
             safeAddress: '0x44acb81da0D81573Feb9d794422Be91914eDcD3d',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/mantle`,
@@ -2221,24 +2353,40 @@ export const NETWORKS: NetworksConfig = {
             nativeDropAmount: parseEther('0.00813').toBigInt(),
             busGasLimit: 50000n,
         },
+        oneSigConfig: {
+            oneSigAddress: '0xc6c85e359f00c46a95ffcd421ed5bd6e550cc582',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/metis`,
+        },
         safeConfig: {
             safeAddress: '0x90c3DFD4Ea593336DBB9F925f73413e6EE84c90E',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/metis`,
         },
     },
     [EndpointId.MODE_V2_MAINNET]: {
+        oneSigConfig: {
+            oneSigAddress: '0x985c40afb557684cac7a0f7ee4ba9f9fbbf01347',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/mode`,
+        },
         safeConfig: {
             safeAddress: '0x9BD292C0f5D95686481A8af9b8694654B25aE1AC',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/mode`,
         },
     },
     [EndpointId.MOONBEAM_V2_MAINNET]: {
+        oneSigConfig: {
+            oneSigAddress: '0xe37e777da889545f01bdbb92271e849c6969f046',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/moonbeam`,
+        },
         safeConfig: {
             safeAddress: '0x40533743FC0F3cCb01ca2196d45dd7958dc89f89',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/moonbeam`,
         },
     },
     [EndpointId.MOONRIVER_V2_MAINNET]: {
+        oneSigConfig: {
+            oneSigAddress: '0xe37e777da889545f01bdbb92271e849c6969f046',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/moonriver`,
+        },
         safeConfig: {
             safeAddress: '0xBAc08c612a791033BC20D991FB9b1892Cb49A39f',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/moonriver`,
@@ -2257,6 +2405,10 @@ export const NETWORKS: NetworksConfig = {
             nativeDropAmount: parseEther('2').toBigInt(),
             busGasLimit: 50000n,
         },
+        oneSigConfig: {
+            oneSigAddress: '0xd0d341b2c985875084f55d95d337b9d771985c60',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/nibiru`,
+        },
         safeConfig: {
             safeAddress: '0xF9d173F325035b4A9654EA21a798b9C8b7a0B4fE',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/nibiru`,
@@ -2274,7 +2426,28 @@ export const NETWORKS: NetworksConfig = {
             },
         },
     },
+    [EndpointId.OG_V2_MAINNET]: {
+        creditMessaging: {
+            ...DEFAULT_CREDIT_MESSAGING_NETWORK_CONFIG,
+            requiredDVNs: [DVNS.NETHERMIND[EndpointId.OG_V2_MAINNET], DVNS.STG[EndpointId.OG_V2_MAINNET]],
+            executor: EXECUTORS.LZ_LABS[EndpointId.OG_V2_MAINNET],
+        },
+        tokenMessaging: {
+            ...DEFAULT_TOKEN_MESSAGING_NETWORK_CONFIG,
+            requiredDVNs: [DVNS.NETHERMIND[EndpointId.OG_V2_MAINNET], DVNS.STG[EndpointId.OG_V2_MAINNET]],
+            executor: EXECUTORS.LZ_LABS[EndpointId.OG_V2_MAINNET],
+            nativeDropAmount: parseEther('0.001').toBigInt(),
+        },
+        oneSigConfig: {
+            oneSigAddress: '0x4731ca7d2c06a4b9a615d5ffe0d7a462001acdeb',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/og`,
+        },
+    },
     [EndpointId.OPBNB_V2_MAINNET]: {
+        oneSigConfig: {
+            oneSigAddress: '0x3a0bb679c334b26732feabc7c3cd9165079fcc77',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/opbnb`,
+        },
         safeConfig: {
             safeAddress: '0xD6578c1C35ee901d01D99e17593E25B13994090b',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/opbnb`,
@@ -2294,6 +2467,10 @@ export const NETWORKS: NetworksConfig = {
             busGasLimit: 50000n,
             busRideGasLimit: 55000n,
         },
+        oneSigConfig: {
+            oneSigAddress: '0xec230013182261343f235b8c92b443f90a8a3c86',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/optimism`,
+        },
         safeConfig: {
             safeAddress: '0x392AC17A9028515a3bFA6CCe51F8b70306C6bd43',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/optimism`,
@@ -2310,6 +2487,10 @@ export const NETWORKS: NetworksConfig = {
             requiredDVNs: [DVNS.NETHERMIND[EndpointId.ORDERLY_V2_MAINNET], DVNS.STG[EndpointId.ORDERLY_V2_MAINNET]],
             executor: EXECUTORS.LZ_LABS[EndpointId.ORDERLY_V2_MAINNET],
             nativeDropAmount: parseEther('0.0005').toBigInt(),
+        },
+        oneSigConfig: {
+            oneSigAddress: '0xef9c1b117d4179359ba1a8cbbbe135fc27576c19',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/orderly`,
         },
         safeConfig: {
             safeAddress: '0xEdA49b9301b4310F6E4a4b42857906f8732a78dF',
@@ -2346,6 +2527,10 @@ export const NETWORKS: NetworksConfig = {
             busRideGasLimit: 65000n,
             nativeDropGasLimit: 45000n,
         },
+        oneSigConfig: {
+            oneSigAddress: '0x18a0b14478f40abf89594bfe1afa6f9e6a4f9a3a',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/peaq`,
+        },
         safeConfig: {
             safeAddress: '0xB2687F7F6290aBa4ED3290ffFF6cB2e1cc30686D',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/peaq`,
@@ -2363,33 +2548,21 @@ export const NETWORKS: NetworksConfig = {
             },
         },
     },
-    [EndpointId.PLUME_V2_MAINNET]: {
+    [EndpointId.PLASMA_V2_MAINNET]: {
         creditMessaging: {
             ...DEFAULT_CREDIT_MESSAGING_NETWORK_CONFIG,
-            requiredDVNs: [DVNS.NETHERMIND[EndpointId.PLUME_V2_MAINNET], DVNS.STG[EndpointId.PLUME_V2_MAINNET]],
-            executor: EXECUTORS.LZ_LABS[EndpointId.PLUME_V2_MAINNET],
+            requiredDVNs: [DVNS.NETHERMIND[EndpointId.PLASMA_V2_MAINNET], DVNS.STG[EndpointId.PLASMA_V2_MAINNET]],
+            executor: EXECUTORS.LZ_LABS[EndpointId.PLASMA_V2_MAINNET],
         },
         tokenMessaging: {
             ...DEFAULT_TOKEN_MESSAGING_NETWORK_CONFIG,
-            requiredDVNs: [DVNS.NETHERMIND[EndpointId.PLUME_V2_MAINNET], DVNS.STG[EndpointId.PLUME_V2_MAINNET]],
-            executor: EXECUTORS.LZ_LABS[EndpointId.PLUME_V2_MAINNET],
-            nativeDropAmount: parseEther('0.001').toBigInt(),
+            requiredDVNs: [DVNS.NETHERMIND[EndpointId.PLASMA_V2_MAINNET], DVNS.STG[EndpointId.PLASMA_V2_MAINNET]],
+            executor: EXECUTORS.LZ_LABS[EndpointId.PLASMA_V2_MAINNET],
+            nativeDropAmount: parseEther('0.01').toBigInt(),
         },
-        safeConfig: {
-            safeAddress: '0x30b1Ca299577f70bc456Fa37C6822d9088069d31',
-            safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/plume`,
-            contractNetworks: {
-                [98865]: {
-                    multiSendAddress: '0x1E999A606771577f10AFee9111b6263cCF176a1D',
-                    multiSendCallOnlyAddress: '0x3BE538f8E6a8809892a1a9618bda69C518a14a8a',
-                    safeMasterCopyAddress: '0xB79F7E683E365E21B150812b86f1e0D60512D168',
-                    safeProxyFactoryAddress: '0x73aFaC05744f1246Ac94d5Ee92d56be5a7298ecC',
-                    fallbackHandlerAddress: '0x1B01E51e3ff9D83DD245D8320c5007b6a3dBF91c',
-                    createCallAddress: '0xF83E45c8575b7317686d4bbeE489bB6a93E6C4E3',
-                    signMessageLibAddress: '0x34A62CbF94d5dF170CA67C4ECB335453117d4515',
-                    simulateTxAccessorAddress: '0x9D59A44Ae2BF3A5A9751463BD4EC77b172eFa9B0',
-                },
-            },
+        oneSigConfig: {
+            oneSigAddress: '0x9fffeba0564f5a521428c20ac601c2dba4b2e67f',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/plasma`,
         },
     },
     [EndpointId.PLUMEPHOENIX_V2_MAINNET]: {
@@ -2410,6 +2583,10 @@ export const NETWORKS: NetworksConfig = {
             executor: EXECUTORS.LZ_LABS[EndpointId.PLUMEPHOENIX_V2_MAINNET],
             nativeDropAmount: parseEther('0.05').toBigInt(),
             taxiGasLimit: 230000n,
+        },
+        oneSigConfig: {
+            oneSigAddress: '0xd372024f83b1882e4c615fd834597bd5b1532706',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/plumephoenix`,
         },
         safeConfig: {
             safeAddress: '0xb8ce2bE5c3c13712b4da61722EAd9d64bB57AbC9',
@@ -2440,6 +2617,10 @@ export const NETWORKS: NetworksConfig = {
             executor: EXECUTORS.LZ_LABS[EndpointId.POLYGON_V2_MAINNET],
             nativeDropAmount: parseEther('0.0324').toBigInt(),
         },
+        oneSigConfig: {
+            oneSigAddress: '0x6ad59102caa47cfa76e7cf2ccc7d76557cc5e37d',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/polygon`,
+        },
         safeConfig: {
             safeAddress: '0x47290DE56E71DC6f46C26e50776fe86cc8b21656',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/polygon`,
@@ -2456,6 +2637,10 @@ export const NETWORKS: NetworksConfig = {
             requiredDVNs: [DVNS.NETHERMIND[EndpointId.RARIBLE_V2_MAINNET], DVNS.STG[EndpointId.RARIBLE_V2_MAINNET]],
             executor: EXECUTORS.LZ_LABS[EndpointId.RARIBLE_V2_MAINNET],
             nativeDropAmount: parseEther('0.00003').toBigInt(),
+        },
+        oneSigConfig: {
+            oneSigAddress: '0x4469467be9eb66c025518db796aee2ed7e9c6e0d',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/rarible`,
         },
         safeConfig: {
             safeAddress: '0x0bB70602d48E1A681B6aCBC788712751A3f0b59d',
@@ -2486,6 +2671,10 @@ export const NETWORKS: NetworksConfig = {
             executor: EXECUTORS.LZ_LABS[EndpointId.ROOTSTOCK_V2_MAINNET],
             nativeDropAmount: parseEther('0.000055').toBigInt(),
         },
+        oneSigConfig: {
+            oneSigAddress: '0x3e7f423105854ae9b4019f92d9fe9757074cf2f3',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/rootstock`,
+        },
         safeConfig: {
             safeAddress: '0x12BF73dADeaFAD42C0293752617C3cDc0b14A364',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/rootstock`,
@@ -2515,12 +2704,20 @@ export const NETWORKS: NetworksConfig = {
             executor: EXECUTORS.LZ_LABS[EndpointId.SCROLL_V2_MAINNET],
             nativeDropAmount: parseEther('0.00035').toBigInt(),
         },
+        oneSigConfig: {
+            oneSigAddress: '0xe46b47be62785c20c6f3cb89f7043ea045e6f88e',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/scroll`,
+        },
         safeConfig: {
             safeAddress: '0xC02c4Ac2DBaA4eC11C306dDb0ABab5b421bd19fB',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/scroll`,
         },
     },
     [EndpointId.SHIMMER_V2_MAINNET]: {
+        oneSigConfig: {
+            oneSigAddress: '0xf7d8c13b546fbead84c30ec3e2df4a5d398d003b',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/shimmer`,
+        },
         safeConfig: {
             safeAddress: '0x3ae59e4cffaad28e6588a269e2142e4a434d5a94',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/shimmer`,
@@ -2539,6 +2736,10 @@ export const NETWORKS: NetworksConfig = {
             nativeDropAmount: parseEther('0.0006').toBigInt(),
             busGasLimit: 60000n,
             nativeDropGasLimit: 30000n,
+        },
+        oneSigConfig: {
+            oneSigAddress: '0x313bd0ff4cbabf5551bdfbc9329002e9246e1bae',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/sei`,
         },
         safeConfig: {
             safeAddress: '0x196009FbeD5825a4Fe7443b5a1908E359d051769',
@@ -2571,6 +2772,10 @@ export const NETWORKS: NetworksConfig = {
             busGasLimit: 75000n,
             nativeDropGasLimit: 45000n,
         },
+        oneSigConfig: {
+            oneSigAddress: '0xd4e9fe5ff9788496267124f4bdf4b48f8c6dad4a',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/story`,
+        },
         safeConfig: {
             safeAddress: '0x720573EcD27d279a28812347B2fd73dF857EB774',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/story`,
@@ -2600,6 +2805,10 @@ export const NETWORKS: NetworksConfig = {
             executor: EXECUTORS.LZ_LABS[EndpointId.SOPHON_V2_MAINNET],
             nativeDropAmount: parseEther('3').toBigInt(),
         },
+        oneSigConfig: {
+            oneSigAddress: '0x82fb702e0cbbd87fd1a046858c4a56dbaa63b2c4',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/sophon`,
+        },
         safeConfig: {
             safeAddress: '0x676e341775964245f414149D1d343F75E9b5B887',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/sophon`,
@@ -2622,7 +2831,7 @@ export const NETWORKS: NetworksConfig = {
             ...DEFAULT_CREDIT_MESSAGING_NETWORK_CONFIG,
             requiredDVNs: [DVNS.NETHERMIND[EndpointId.SOMNIA_V2_MAINNET], DVNS.STG[EndpointId.SOMNIA_V2_MAINNET]],
             executor: EXECUTORS.LZ_LABS[EndpointId.SOMNIA_V2_MAINNET],
-            sendCreditGasLimit: 20n * DEFAULT_CREDIT_MESSAGING_NETWORK_CONFIG.sendCreditGasLimit,
+            sendCreditGasLimit: 1_000_000n + 20n * DEFAULT_CREDIT_MESSAGING_NETWORK_CONFIG.sendCreditGasLimit,
         },
         tokenMessaging: {
             ...DEFAULT_TOKEN_MESSAGING_NETWORK_CONFIG,
@@ -2633,6 +2842,10 @@ export const NETWORKS: NetworksConfig = {
             busGasLimit: 20n * DEFAULT_TOKEN_MESSAGING_NETWORK_CONFIG.taxiGasLimit,
             busRideGasLimit: 20n * DEFAULT_TOKEN_MESSAGING_NETWORK_CONFIG.taxiGasLimit,
             nativeDropGasLimit: 20n * DEFAULT_TOKEN_MESSAGING_NETWORK_CONFIG.taxiGasLimit,
+        },
+        oneSigConfig: {
+            oneSigAddress: '0xd6b03d71e401479cc976fc94a41a37576404e7bd',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/somnia`,
         },
         safeConfig: {
             safeAddress: '0xf6a997990Fe12B2489bF3f56bBbc442e4cb185A7',
@@ -2663,6 +2876,10 @@ export const NETWORKS: NetworksConfig = {
             executor: EXECUTORS.LZ_LABS[EndpointId.SONEIUM_V2_MAINNET],
             nativeDropAmount: parseEther('0.0005').toBigInt(),
         },
+        oneSigConfig: {
+            oneSigAddress: '0x18a0b14478f40abf89594bfe1afa6f9e6a4f9a3a',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/soneium`,
+        },
         safeConfig: {
             safeAddress: '0xea4645d254A9E3C67595EaF3AFaaf3E0DaA4fa0e',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/soneium`,
@@ -2691,6 +2908,10 @@ export const NETWORKS: NetworksConfig = {
             requiredDVNs: [DVNS.NETHERMIND[EndpointId.SONIC_V2_MAINNET], DVNS.STG[EndpointId.SONIC_V2_MAINNET]],
             executor: EXECUTORS.LZ_LABS[EndpointId.SONIC_V2_MAINNET],
             nativeDropAmount: parseEther('0.5').toBigInt(),
+        },
+        oneSigConfig: {
+            oneSigAddress: '0x313bd0ff4cbabf5551bdfbc9329002e9246e1bae',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/sonic`,
         },
         safeConfig: {
             safeAddress: '0x347eD93cA2F7aDCe6B1629590cC9717A8904e73A',
@@ -2730,6 +2951,10 @@ export const NETWORKS: NetworksConfig = {
             busRideGasLimit: 60000n,
             nativeDropGasLimit: 25000n,
         },
+        oneSigConfig: {
+            oneSigAddress: '0xb95abacefa0d4b0443ae765aac376f42791a610c',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/superposition`,
+        },
         safeConfig: {
             safeAddress: '0x670c49578aFd9644ceF7BFc43b399E11c4ba7837',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/superposition`,
@@ -2758,6 +2983,10 @@ export const NETWORKS: NetworksConfig = {
             requiredDVNs: [DVNS.NETHERMIND[EndpointId.SWELL_V2_MAINNET], DVNS.STG[EndpointId.SWELL_V2_MAINNET]],
             executor: EXECUTORS.LZ_LABS[EndpointId.SWELL_V2_MAINNET],
             nativeDropAmount: parseEther('0.0003').toBigInt(),
+        },
+        oneSigConfig: {
+            oneSigAddress: '0x4015894e779198847ae942cebaaf04dc70adbd37',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/swell`,
         },
         safeConfig: {
             safeAddress: '0x4565E255dbA625fDf7bF1229ED6C280915740aA8',
@@ -2788,6 +3017,10 @@ export const NETWORKS: NetworksConfig = {
             executor: EXECUTORS.LZ_LABS[EndpointId.TAIKO_V2_MAINNET],
             nativeDropAmount: parseEther('0.0008').toBigInt(),
         },
+        oneSigConfig: {
+            oneSigAddress: '0x4469467be9eb66c025518db796aee2ed7e9c6e0d',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/taiko`,
+        },
         safeConfig: {
             safeAddress: '0xB3e401A59571D4BF5996B0f5FfFE377FbfE71359',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/taiko`,
@@ -2816,6 +3049,10 @@ export const NETWORKS: NetworksConfig = {
             requiredDVNs: [DVNS.NETHERMIND[EndpointId.TELOS_V2_MAINNET], DVNS.STG[EndpointId.TELOS_V2_MAINNET]],
             executor: EXECUTORS.LZ_LABS[EndpointId.TELOS_V2_MAINNET],
             nativeDropAmount: parseEther('1').toBigInt(),
+        },
+        oneSigConfig: {
+            oneSigAddress: '0x50bb6dbc58b92aa0bd9593a667b07067e2be5e92',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/telos`,
         },
         safeConfig: {
             safeAddress: '0x8421259dda5CE973680a1aAC7EFf45589A515B55',
@@ -2847,6 +3084,10 @@ export const NETWORKS: NetworksConfig = {
             nativeDropAmount: parseEther('0.005').toBigInt(),
             taxiGasLimit: 350000n,
         },
+        oneSigConfig: {
+            oneSigAddress: '0x77f28cf9dc0c14ef691c6ec45ca24d53fcb421bf',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/unichain`,
+        },
         safeConfig: {
             safeAddress: '0x60049009F2c54E50f93739Ffa2B1896b4594292B',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/unichain`,
@@ -2864,35 +3105,6 @@ export const NETWORKS: NetworksConfig = {
             },
         },
     },
-    [EndpointId.XCHAIN_V2_MAINNET]: {
-        creditMessaging: {
-            ...DEFAULT_CREDIT_MESSAGING_NETWORK_CONFIG,
-            requiredDVNs: [DVNS.NETHERMIND[EndpointId.XCHAIN_V2_MAINNET], DVNS.STG[EndpointId.XCHAIN_V2_MAINNET]],
-            executor: EXECUTORS.LZ_LABS[EndpointId.XCHAIN_V2_MAINNET],
-        },
-        tokenMessaging: {
-            ...DEFAULT_TOKEN_MESSAGING_NETWORK_CONFIG,
-            requiredDVNs: [DVNS.NETHERMIND[EndpointId.XCHAIN_V2_MAINNET], DVNS.STG[EndpointId.XCHAIN_V2_MAINNET]],
-            executor: EXECUTORS.LZ_LABS[EndpointId.XCHAIN_V2_MAINNET],
-            nativeDropAmount: parseEther('0.00004').toBigInt(),
-        },
-        safeConfig: {
-            safeAddress: '0xdC20E4cDf9C1bF75dF848D4e8F4E3B9B767840C8',
-            safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/xchain`,
-            contractNetworks: {
-                [94524]: {
-                    multiSendAddress: '0xD7e873F871032f8F2B581F1A92fbfd7F5cC0DB87',
-                    multiSendCallOnlyAddress: '0x0a61F43687FB5389A191b60688A878D8c230518C',
-                    safeMasterCopyAddress: '0x7D3e29Fe34eA9f0f061ca1793698BB31227B539c',
-                    safeProxyFactoryAddress: '0xCe2a317b5E866fb4a88d2d1AD5b62791504e6294',
-                    fallbackHandlerAddress: '0x1808829ca983697d33CD2BaD30c1EaAF51a89E07',
-                    createCallAddress: '0xcaA28451125C3c355C8a5596C99B0360Cdd2F928',
-                    signMessageLibAddress: '0x298E98C8DeCa852438b2Df6Bc4bD05BC18D6E7D3',
-                    simulateTxAccessorAddress: '0xECeBABaaDe81E90524F64426FF76BBdD6683739C',
-                },
-            },
-        },
-    },
     [EndpointId.XDC_V2_MAINNET]: {
         creditMessaging: {
             ...DEFAULT_CREDIT_MESSAGING_NETWORK_CONFIG,
@@ -2904,6 +3116,10 @@ export const NETWORKS: NetworksConfig = {
             requiredDVNs: [DVNS.NETHERMIND[EndpointId.XDC_V2_MAINNET], DVNS.STG[EndpointId.XDC_V2_MAINNET]],
             executor: EXECUTORS.LZ_LABS[EndpointId.XDC_V2_MAINNET],
             nativeDropAmount: parseEther('0.01').toBigInt(),
+        },
+        oneSigConfig: {
+            oneSigAddress: '0x4ddcce7c68b281f256b031f70192d25480d8b139',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/xdc`,
         },
         safeConfig: {
             safeAddress: '0x5A185C81AFa796a753dd662343cbF911254f796e',
@@ -2940,21 +3156,23 @@ export const NETWORKS: NetworksConfig = {
             executor: EXECUTORS.LZ_LABS[EndpointId.ZKCONSENSYS_V2_MAINNET],
             nativeDropAmount: parseEther('0.00005').toBigInt(),
         },
+        oneSigConfig: {
+            oneSigAddress: '0xd37ba986553f7ac25bdf9867a60b10ebf182e51e',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/zkconsensys`,
+        },
         safeConfig: {
             safeAddress: '0xdBd9E7f55C3a7A0F17cCAc06dD4f4cbf06f7AD5c',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/zkconsensys`,
         },
     },
     [EndpointId.ZKPOLYGON_V2_MAINNET]: {
+        oneSigConfig: {
+            oneSigAddress: '0xedf2ea1672bb77b827ecbad969d89f4f2b6a8ae1',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/zkpolygon`,
+        },
         safeConfig: {
             safeAddress: '0x5D3917b47E963eC703eD66Da6637C701365fF500',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/zkpolygon`,
-        },
-    },
-    [EndpointId.ZKSYNC_V2_MAINNET]: {
-        safeConfig: {
-            safeAddress: '0x026756AB43866eCd92289663E91CCa8afb20414B',
-            safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/zksync`,
         },
     },
 
@@ -2964,6 +3182,26 @@ export const NETWORKS: NetworksConfig = {
     [EndpointId.ARBSEP_V2_TESTNET]: {
         creditMessaging: DEFAULT_CREDIT_MESSAGING_NETWORK_CONFIG,
         tokenMessaging: DEFAULT_TOKEN_MESSAGING_NETWORK_CONFIG,
+        oneSigConfig: {
+            oneSigAddress: '0x55a2d5a7d5f7bdcab8efc30da5eae6a4e4277a18',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_TESTNET}/arbsep`,
+        },
+        safeConfig: {
+            safeAddress: '0xe98fe3d98ff3c2b8346be8ce87b48cde037a0995',
+            safeUrl: `${process.env.BASE_SAFE_URL_TESTNET}/arbsep`,
+            contractNetworks: {
+                [421614]: {
+                    multiSendAddress: '0xA238CBeb142c10Ef7Ad8442C6D1f9E89e07e7761',
+                    multiSendCallOnlyAddress: '0x40A2aCCbd92BCA938b02010E17A5b8929b49130D',
+                    safeMasterCopyAddress: '0x3E5c63644E683549055b9Be8653de26E0B4CD36E',
+                    safeProxyFactoryAddress: '0xa6B71E26C5e0845f74c812102Ca7114b6a896AB2',
+                    fallbackHandlerAddress: '0xf48f2B2d2a534e402487b3ee7C18c33Aec0Fe5e4',
+                    createCallAddress: '0x7cbB62EaA69F79e6873cD1ecB2392971036cFAa4',
+                    signMessageLibAddress: '0xA65387F16B013cf2Af4605Ad8aA5ec25a2cbA3a2',
+                    simulateTxAccessorAddress: '0x59AD6735bCd8152B84860Cb256dD9e96b85F69Da',
+                },
+            },
+        },
     },
     [EndpointId.AVALANCHE_V2_TESTNET]: {
         creditMessaging: DEFAULT_CREDIT_MESSAGING_NETWORK_CONFIG,
@@ -2988,6 +3226,26 @@ export const NETWORKS: NetworksConfig = {
     [EndpointId.OPTSEP_V2_TESTNET]: {
         creditMessaging: DEFAULT_CREDIT_MESSAGING_NETWORK_CONFIG,
         tokenMessaging: DEFAULT_TOKEN_MESSAGING_NETWORK_CONFIG,
+        oneSigConfig: {
+            oneSigAddress: '0x93c6E9904fF6641dCE90Af118EAcE11C2F115247',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_TESTNET}/optsep`,
+        },
+        safeConfig: {
+            safeAddress: '0x4842cb8bd3fd7469fab47218a262855eae9b824e',
+            safeUrl: `${process.env.BASE_SAFE_URL_TESTNET}/optsep`,
+            contractNetworks: {
+                [11155420]: {
+                    multiSendAddress: '0x998739BFdAAdde7C933B942a68053933098f9EDa',
+                    multiSendCallOnlyAddress: '0xA1dabEF33b3B82c7814B6D82A79e50F4AC44102B',
+                    safeMasterCopyAddress: '0xfb1bffC9d739B8D520DaF37dF666da4C687191EA',
+                    safeProxyFactoryAddress: '0xC22834581EbC8527d974F8a1c97E1bEA4EF910BC',
+                    fallbackHandlerAddress: '0x017062a1dE2FE6b99BE3d9d37841FeD19F573804',
+                    createCallAddress: '0xB19D6FFc2182150F8Eb585b79D4ABcd7C5640A9d',
+                    signMessageLibAddress: '0x98FFBBF51bb33A056B08ddf711f289936AafF717',
+                    simulateTxAccessorAddress: '0x727a77a074D1E6c4530e814F89E618a3298FC044',
+                },
+            },
+        },
     },
     [EndpointId.SEPOLIA_V2_TESTNET]: {
         creditMessaging: DEFAULT_CREDIT_MESSAGING_NETWORK_CONFIG,
