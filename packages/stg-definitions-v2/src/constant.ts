@@ -77,6 +77,7 @@ export const DVNS = {
         [EndpointId.SONIC_V2_MAINNET]: '0x05aaefdf9db6e0f7d27fa3b6ee099edb33da029e',
         [EndpointId.STABLE_V2_MAINNET]: '0x9bcd17a654bffaa6f8fea38d19661a7210e22196',
         [EndpointId.STORY_V2_MAINNET]: '0xdd7b5e1db4aafd5c8ec3b764efb8ed265aa5445b',
+        [EndpointId.SUBTENSOREVM_V2_MAINNET]: '0x8d77d35604a9f37f488e41d1d916b2a0088f82dd',
         [EndpointId.SUPERPOSITION_V2_MAINNET]: '0x07c05eab7716acb6f83ebf6268f8eecda8892ba1',
         [EndpointId.SWELL_V2_MAINNET]: '0xdd7b5e1db4aafd5c8ec3b764efb8ed265aa5445b',
         [EndpointId.TAIKO_V2_MAINNET]: '0xdd7b5e1db4aafd5c8ec3b764efb8ed265aa5445b',
@@ -145,6 +146,7 @@ export const DVNS = {
         [EndpointId.SONIC_V2_MAINNET]: '0x282b3386571f7f794450d5789911a9804fa346b4',
         [EndpointId.STABLE_V2_MAINNET]: '0x9c061c9a4782294eef65ef28cb88233a987f4bdd',
         [EndpointId.STORY_V2_MAINNET]: '0x9c061c9a4782294eef65ef28cb88233a987f4bdd',
+        [EndpointId.SUBTENSOREVM_V2_MAINNET]: '0x282b3386571f7f794450d5789911a9804fa346b4',
         [EndpointId.SUPERPOSITION_V2_MAINNET]: '0x282b3386571f7f794450d5789911a9804fa346b4',
         [EndpointId.SWELL_V2_MAINNET]: '0x6788f52439aca6bff597d3eec2dc9a44b8fee842',
         [EndpointId.TAIKO_V2_MAINNET]: '0xc097ab8cd7b053326dfe9fb3e3a31a0cce3b526f',
@@ -250,6 +252,7 @@ export const EXECUTORS = {
         [EndpointId.SONIC_V2_MAINNET]: '0x4208D6E27538189bB48E603D6123A94b8Abe0A0b',
         [EndpointId.STABLE_V2_MAINNET]: '0x4208D6E27538189bB48E603D6123A94b8Abe0A0b',
         [EndpointId.STORY_V2_MAINNET]: '0x41Bdb4aa4A63a5b2Efc531858d3118392B1A1C3d',
+        [EndpointId.SUBTENSOREVM_V2_MAINNET]: '0x4208D6E27538189bB48E603D6123A94b8Abe0A0b',
         [EndpointId.SUPERPOSITION_V2_MAINNET]: '0x4208D6E27538189bB48E603D6123A94b8Abe0A0b',
         [EndpointId.SWELL_V2_MAINNET]: '0xa20DB4Ffe74A31D17fc24BD32a7DD7555441058e',
         [EndpointId.TAIKO_V2_MAINNET]: '0xa20DB4Ffe74A31D17fc24BD32a7DD7555441058e',
@@ -979,6 +982,10 @@ export const ASSETS: Record<TokenName, AssetConfig> = {
                 type: StargateType.Oft,
                 address: '0xF1815bd50389c46847f0Bda824eC8da914045D14',
             },
+            [EndpointId.SUBTENSOREVM_V2_MAINNET]: {
+                type: StargateType.Oft,
+                address: '0x9001dbe4D68d36ab87923A2a9Dfb0c745fd25001',
+            },
             [EndpointId.SUPERPOSITION_V2_MAINNET]: {
                 type: StargateType.Oft,
                 address: '0x6c030c5CC283F791B26816f325b9C632d964F8A1',
@@ -1211,6 +1218,7 @@ export const OFT_WRAPPER: OftWrapperConfig = {
         [EndpointId.SONIC_V2_MAINNET]: {},
         [EndpointId.STABLE_V2_MAINNET]: {},
         [EndpointId.STORY_V2_MAINNET]: {},
+        [EndpointId.SUBTENSOREVM_V2_MAINNET]: {},
         [EndpointId.SUPERPOSITION_V2_MAINNET]: {},
         [EndpointId.SWELL_V2_MAINNET]: {},
         [EndpointId.TAIKO_V2_MAINNET]: {},
@@ -3518,6 +3526,29 @@ export const NETWORKS: NetworksConfig = {
                     simulateTxAccessorAddress: '0x3d4BA2E0884aa488718476ca2FB8Efc291A46199',
                 },
             },
+        },
+    },
+    [EndpointId.SUBTENSOREVM_V2_MAINNET]: {
+        creditMessaging: {
+            ...DEFAULT_CREDIT_MESSAGING_NETWORK_CONFIG,
+            requiredDVNs: [
+                DVNS.NETHERMIND[EndpointId.SUBTENSOREVM_V2_MAINNET],
+                DVNS.LZ_LABS[EndpointId.SUBTENSOREVM_V2_MAINNET],
+            ],
+            executor: EXECUTORS.LZ_LABS[EndpointId.SUBTENSOREVM_V2_MAINNET],
+        },
+        tokenMessaging: {
+            ...DEFAULT_TOKEN_MESSAGING_NETWORK_CONFIG,
+            requiredDVNs: [
+                DVNS.NETHERMIND[EndpointId.SUBTENSOREVM_V2_MAINNET],
+                DVNS.LZ_LABS[EndpointId.SUBTENSOREVM_V2_MAINNET],
+            ],
+            executor: EXECUTORS.LZ_LABS[EndpointId.SUBTENSOREVM_V2_MAINNET],
+            nativeDropAmount: parseEther('0.015').toBigInt(),
+        },
+        oneSigConfig: {
+            oneSigAddress: '0x349c9b918a02e81d0a358eaac9c63f902d95e2da',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/subtensorevm`,
         },
     },
     [EndpointId.SUPERPOSITION_V2_MAINNET]: {

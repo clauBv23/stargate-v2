@@ -716,6 +716,13 @@ const networks: NetworksUserConfig = {
         oneSigConfig: getOneSigConfig(EndpointId.STORY_V2_MAINNET),
         timeout: DEFAULT_NETWORK_TIMEOUT,
     },
+    'subtensorevm-mainnet': {
+        eid: EndpointId.SUBTENSOREVM_V2_MAINNET,
+        url: process.env.RPC_URL_SUBTENSOREVM_MAINNET || 'https://lite.chain.opentensor.ai',
+        accounts: mainnetAccounts,
+        oneSigConfig: getOneSigConfig(EndpointId.SUBTENSOREVM_V2_MAINNET),
+        timeout: DEFAULT_NETWORK_TIMEOUT,
+    },
     'superposition-mainnet': {
         eid: EndpointId.SUPERPOSITION_V2_MAINNET,
         url: process.env.RPC_URL_SUPERPOSITION_MAINNET || 'https://rpc.superposition.so',
