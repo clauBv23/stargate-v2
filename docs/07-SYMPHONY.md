@@ -1,6 +1,7 @@
 # Symphony
 
 This repository is prepared for the prototype Symphony runner from `openai/symphony`.
+This workflow is currently tested against the `clauBv23` fork.
 
 ## Files
 
