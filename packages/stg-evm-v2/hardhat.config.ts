@@ -220,6 +220,13 @@ const networks: NetworksUserConfig = {
         oneSigConfig: getOneSigConfig(EndpointId.ASTAR_V2_MAINNET),
         timeout: DEFAULT_NETWORK_TIMEOUT,
     },
+    'ault-mainnet': {
+        eid: EndpointId.AULT_V2_MAINNET,
+        url: process.env.RPC_URL_AULT_MAINNET || 'https://main-json-rpc.cloud.aultblockchain.xyz',
+        accounts: mainnetAccounts,
+        oneSigConfig: getOneSigConfig(EndpointId.AULT_V2_MAINNET),
+        timeout: DEFAULT_NETWORK_TIMEOUT,
+    },
     'aurora-mainnet': {
         eid: EndpointId.AURORA_V2_MAINNET,
         url: process.env.RPC_URL_AURORA_MAINNET || 'https://aurora.drpc.org',

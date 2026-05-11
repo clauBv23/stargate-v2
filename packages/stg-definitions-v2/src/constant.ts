@@ -23,6 +23,7 @@ export const DVNS = {
         [EndpointId.APE_V2_MAINNET]: '0x07653d28b0f53d4c54b70eb1f9025795b23a9d6e',
         [EndpointId.APEXFUSIONNEXUS_V2_MAINNET]: '0x70bf42c69173d6e33b834f59630dac592c70b369',
         [EndpointId.ARBITRUM_V2_MAINNET]: '0xa7b5189bcA84Cd304D8553977c7C614329750d99',
+        [EndpointId.AULT_V2_MAINNET]: '0x78203678d264063815dac114ea810e9837cd80f7',
         [EndpointId.AURORA_V2_MAINNET]: '0x34730f2570e6cff8b1c91faabf37d0dd917c4367',
         [EndpointId.AVALANCHE_V2_MAINNET]: '0xa59BA433ac34D2927232918Ef5B2eaAfcF130BA5',
         [EndpointId.BASE_V2_MAINNET]: '0xcd37CA043f8479064e10635020c65FfC005d36f6',
@@ -91,6 +92,7 @@ export const DVNS = {
         [EndpointId.APE_V2_MAINNET]: '0x6788f52439aca6bff597d3eec2dc9a44b8fee842',
         [EndpointId.APEXFUSIONNEXUS_V2_MAINNET]: '0x282b3386571f7f794450d5789911a9804fa346b4',
         [EndpointId.ARBITRUM_V2_MAINNET]: '0x2f55c492897526677c5b68fb199ea31e2c126416',
+        [EndpointId.AULT_V2_MAINNET]: '0x282b3386571f7f794450d5789911a9804fa346b4',
         [EndpointId.AURORA_V2_MAINNET]: '0xd4a903930f2c9085586cda0b11d9681eecb20d2f',
         [EndpointId.AVALANCHE_V2_MAINNET]: '0x962f502a63f5fbeb44dc9ab932122648e8352959',
         [EndpointId.BASE_V2_MAINNET]: '0x9e059a54699a285714207b43b055483e78faac25',
@@ -196,6 +198,7 @@ export const EXECUTORS = {
         [EndpointId.APE_V2_MAINNET]: '0xcCE466a522984415bC91338c232d98869193D46e',
         [EndpointId.APEXFUSIONNEXUS_V2_MAINNET]: '0x4208D6E27538189bB48E603D6123A94b8Abe0A0b',
         [EndpointId.ARBITRUM_V2_MAINNET]: '0x31CAe3B7fB82d847621859fb1585353c5720660D',
+        [EndpointId.AULT_V2_MAINNET]: '0x4208D6E27538189bB48E603D6123A94b8Abe0A0b',
         [EndpointId.AURORA_V2_MAINNET]: '0xA2b402FFE8dd7460a8b425644B6B9f50667f0A61',
         [EndpointId.AVALANCHE_V2_MAINNET]: '0x90E595783E43eb89fF07f63d27B8430e6B44bD9c',
         [EndpointId.BASE_V2_MAINNET]: '0x2CCA08ae69E0C44b18a57Ab2A87644234dAebaE4',
@@ -299,6 +302,11 @@ export const ASSETS: Record<TokenName, AssetConfig> = {
             },
             [EndpointId.ARBITRUM_V2_MAINNET]: {
                 type: StargateType.Native,
+            },
+            [EndpointId.AULT_V2_MAINNET]: {
+                symbol: 'WETH',
+                name: 'WETH',
+                type: StargateType.Oft,
             },
             [EndpointId.BASE_V2_MAINNET]: {
                 type: StargateType.Native,
@@ -779,6 +787,10 @@ export const ASSETS: Record<TokenName, AssetConfig> = {
             [EndpointId.ARBITRUM_V2_MAINNET]: {
                 address: '0xaf88d065e77c8cc2239327c5edb3a432268e5831',
                 type: StargateType.Pool,
+            },
+            [EndpointId.AULT_V2_MAINNET]: {
+                type: StargateType.Oft,
+                address: '0x5b58c971AF1EE0Fe5D5f772d68Ab3829262DFD2b',
             },
             [EndpointId.AURORA_V2_MAINNET]: {
                 address: '0x368ebb46aca6b8d0787c96b2b20bd3cc3f2c45f7',
@@ -1608,6 +1620,23 @@ export const NETWORKS: NetworksConfig = {
         safeConfig: {
             safeAddress: '0x5d3917b47e963ec703ed66da6637c701365ff500',
             safeUrl: `${process.env.BASE_SAFE_URL_MAINNET}/astar`,
+        },
+    },
+    [EndpointId.AULT_V2_MAINNET]: {
+        creditMessaging: {
+            ...DEFAULT_CREDIT_MESSAGING_NETWORK_CONFIG,
+            requiredDVNs: [DVNS.NETHERMIND[EndpointId.AULT_V2_MAINNET], DVNS.LZ_LABS[EndpointId.AULT_V2_MAINNET]],
+            executor: EXECUTORS.LZ_LABS[EndpointId.AULT_V2_MAINNET],
+        },
+        tokenMessaging: {
+            ...DEFAULT_TOKEN_MESSAGING_NETWORK_CONFIG,
+            requiredDVNs: [DVNS.NETHERMIND[EndpointId.AULT_V2_MAINNET], DVNS.LZ_LABS[EndpointId.AULT_V2_MAINNET]],
+            executor: EXECUTORS.LZ_LABS[EndpointId.AULT_V2_MAINNET],
+            nativeDropAmount: parseEther('0.002109375').toBigInt(), // TODO: Double check this value
+        },
+        oneSigConfig: {
+            oneSigAddress: '0x80e6ab28c9da544c8f876162d6ee9e00e9366456',
+            oneSigUrl: `${process.env.BASE_ONE_SIG_URL_MAINNET}/ault`,
         },
     },
     [EndpointId.AURORA_V2_MAINNET]: {
