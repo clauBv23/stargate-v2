@@ -27,6 +27,8 @@ Use OneSig for new deployments and new chains. Safe config is deprecated for new
 
 ## Validation
 
+Run post-deploy validation from the PR branch that contains the human deployment artifacts.
+
 Set `RPC_URL_MAINNET` before running SDK validation. It must be the repo-supported LayerZero proxy RPC template for all checked mainnet chains.
 
 ```shell
@@ -42,12 +44,18 @@ After `validate` has restored generated config in the workspace, `pnpm --filter 
 
 After a human deploys contracts, verify deployment outputs and explorer metadata before wiring or ownership transfer:
 
+First confirm the deployment artifacts exist in the current workspace:
+
+```shell
+test -d packages/stg-evm-v2/deployments/<deployment-network>
+```
+
 ```shell
 cd packages/stg-evm-v2
 pnpm dlx @layerzerolabs/verify-contract --network <deployment-network> --api-url <explorer-api-url>
 ```
 
-Use the deployment folder name for `<deployment-network>`, for example `ault-mainnet`, not the bare LayerZero chain key `ault`.
+Use the deployment folder name for `<deployment-network>`, for example `ault-mainnet`, not the bare LayerZero chain key `ault`. If the folder is missing, check out or push the PR branch that contains the human deployment artifacts before verifying.
 
 Use an explicit explorer API URL when available. If it is missing, derive it from Chainlist or LayerZero metadata only when the endpoint is obvious, such as a Blockscout-compatible explorer URL plus `/api`. Treat explorer UI URLs like `/home` as hints, not as API URLs.
 

@@ -184,6 +184,7 @@ No description provided.
 - If the issue status is `Deployed`, do only post-deploy verification:
   - Do not edit deployment config or run deploy, preconfigure, configure, wire, transfer-ownership, or any command that signs or sends transactions.
   - Read the issue description and prior Linear comments for the chain key, environment, PR/branch, deployment notes, and optional explorer API or UI URL.
+  - Before validation, run `github_publisher` `checkout_pr` with the PR URL or number from the issue/comments so the workspace is on the branch that contains the deployment artifacts. If no PR is available, leave a handoff note.
   - SDK validation requires `RPC_URL_MAINNET` in the Symphony process environment. Do not guess this value from Chainlist and do not write `.env.local`; if validation reports missing RPC URLs, leave a handoff note.
   - Run these `external_access` `command_run` preflights in order:
     - `command: "pnpm"`, `args: ["--filter", "@stargatefinance/stg-definitions-v2", "build"]`
@@ -191,6 +192,7 @@ No description provided.
     - `command: "pnpm"`, `args: ["--filter", "@stargatefinance/stg-devtools-evm-hardhat-v2", "build"]`
   - Run `external_access` `command_run` with `command: "pnpm"` and `args: ["--filter", "@stargatefinance/stg-evm-sdk-v2", "validate"]`. Do not hand-edit generated SDK config. Use `check:deployment` only for a narrow rerun after `validate` restores generated config in the same workspace.
   - Resolve the explorer API URL in this order: explicit issue/comment API URL, Chainlist explorer metadata, then LayerZero deployments metadata. Use the bare LayerZero chain key for metadata lookups, such as `ault`. UI URLs such as `/home` are hints only; normalize to the explorer origin and derive an API endpoint only when obvious. If no public HTTPS API URL can be identified confidently, leave a handoff note.
+  - Before contract verification, confirm `packages/stg-evm-v2/deployments/<deployment-network>` exists in the current workspace. If it is missing, leave a handoff note asking for the PR branch or deployment artifacts; do not run the verifier.
   - If an explorer API URL is available, run `external_access` `command_run` with `command: "pnpm"` and `args: ["dlx", "@layerzerolabs/verify-contract", "--network", "<deployment-network>", "--api-url", "<explorer-api-url>"]`, where `<deployment-network>` is the deployment folder name such as `ault-mainnet`.
   - Leave a concise Linear comment with verification results. Move the issue to `Post-Deploy Review` if that status exists; otherwise move it to `Human Review` if that status exists so blocked or completed post-deploy checks leave active polling.
 - Make the smallest change that satisfies the acceptance criteria.
